@@ -154,6 +154,29 @@ export const Rulesets: import('../sim/dex-formats').FormatDataTable = {
 			}
 		},
 	},
+    megaclause: {
+		effectType: 'Rule',
+		name: 'Mega Clause',
+		desc: 'You may only have one Mega Pokémon per team.',
+		onValidateTeam(team) {
+			let megaCount = 0;
+
+			for (const set of team) {
+				const species = this.dex.species.get(set.species);
+
+				const isMega = species.forme === 'Mega' || species.name.includes('-Mega');
+
+				if (isMega) {
+					megaCount++;
+					if (megaCount > 1) {
+						return [
+							'You may only have one Mega Pokémon per team.',
+						];
+					}
+				}
+			}
+		},
+	},
 	standarddraft: {
 		effectType: 'ValidatorRule',
 		name: 'Standard Draft',

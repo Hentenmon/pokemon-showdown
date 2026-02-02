@@ -19,9 +19,20 @@ The column value will be ignored for repeat sections.
 
 export const Formats: import('../sim/dex-formats').FormatList = [
 
+
+	{
+		section: "Hentenmon's Formats",
+	},
+	{
+		name: "[Gen 1] Extinction Red OU",
+    	mod: 'gen1extinctionred',
+    	ruleset: ['Standard', 'Mega Clause'],
+		banlist: ["Uber", "AG"],
+	},
+
 	// Likeshop Spotlight
 	///////////////////////////////////////////////////////////////////
-
+    /*
 	{
 		section: "Likeshop Spotlight",
 	},
@@ -5453,4 +5464,6 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		battle: { trunc: Math.trunc },
 		ruleset: ['HP Percentage Mod', 'Cancel Mod', 'Desync Clause Mod', 'Max Team Size = 24', 'Max Move Count = 24', 'Max Level = 9999', 'Default Level = 100'],
 	},
+
+	*/
 ];

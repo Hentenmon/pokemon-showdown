@@ -3159,6 +3159,9 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		gen5: {
 			desc: "Has a 30% chance to confuse the target. This move can hit a target using Bounce, Fly, or Sky Drop, or is under the effect of Sky Drop. If the weather is Rain Dance, this move does not check accuracy. If the weather is Sunny Day, this move's accuracy is 50%.",
 		},
+		gen1: {
+			desc: "Has a 10% chance to confuse the target.",
+		}
 	},
 	hydrocannon: {
 		name: "Hydro Cannon",
