@@ -19,7 +19,7 @@ interface Gen1RandomBattleSpecies {
 export class RandomGen1Teams extends RandomGen2Teams {
 	override randomData: { [species: IDEntry]: Gen1RandomBattleSpecies } = require('./data.json');
 
-	const MEGA_SPECIES = new Set<ID>([
+	const MEGA_SPECIES = new Set<ID>;([
 		'venusaurmega',
 		'charizardmegax',
 		'charizardmegay',
