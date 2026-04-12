@@ -62,11 +62,11 @@ export class RandomGen1Teams extends RandomGen2Teams {
 		for (const pokemon of randomN) {
 			const species = this.dex.species.get(pokemon);
 
-			let mbstmin = 1307;
+			let mbstmin = 1600;
 			if (MEGA_SPECIES.has(species.id)) {
-				mbstmin = 1600;
+				mbstmin = 2000;
 			} else if (RESTRICTED_SPECIES.has(species.id)) {
-				mbstmin = 1500;
+				mbstmin = 1900;
 			}
 
 			const stats = species.baseStats;
@@ -215,6 +215,15 @@ export class RandomGen1Teams extends RandomGen2Teams {
 			if (species.id === 'ditto') this.battleHasDitto = true;
 
 			if (isMega || isRestricted) hasMegaOrRestricted = true;
+		}
+
+		// Ensure at least one Mega
+		if (!pokemon.some(p => MEGA_SPECIES.has(this.dex.species.get(p.species).id))) {
+			const megaPool = Object.keys(randomData).filter(s => MEGA_SPECIES.has(s as ID));
+			const megaSpecies = this.dex.species.get(this.sample(megaPool));
+
+		// Replace last mon with a Mega
+		pokemon[pokemon.length - 1] = this.randomSet(megaSpecies);
 		}
 
 		return pokemon;

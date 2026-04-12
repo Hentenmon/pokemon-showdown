@@ -55,7 +55,7 @@ onValidateTeam(team) {
 
 onSwitchIn(pokemon) {
 	if (pokemon.species.name.includes('Mega')) return;
-}
+},
 
 	init() {
 		/* ============================
