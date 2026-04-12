@@ -57,6 +57,10 @@ onSwitchIn(pokemon) {
 	if (pokemon.species.name.includes('Mega')) return;
 },
 
+if (source.volatiles['focusenergy']) {
+	critChance = this.battle.clampIntRange(critChance * 4, 1, 255);
+}
+
 	init() {
 		/* ============================
 		 * POKÉMON FIXES
