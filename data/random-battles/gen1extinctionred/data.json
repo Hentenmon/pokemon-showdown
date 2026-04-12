@@ -376,7 +376,7 @@
         ]
     },
     "dugtrio": {
-        "level": 80,
+        "level": 70,
         "sets": [
             {
                 "role": "Physical Attacker",
@@ -385,7 +385,7 @@
         ]
     },
     "dugtrioalola": {
-        "level": 80,
+        "level": 70,
         "sets": [
             {
                 "role": "Physical Attacker",
@@ -394,7 +394,7 @@
         ]
     },
     "wugtrio": {
-        "level": 80,
+        "level": 90,
         "sets": [
             {
                 "role": "Mixed Attacker",
@@ -583,7 +583,7 @@
             {
                 "role": "Mixed Attacker",
                 "movepool": ["earthquake", "spore", "gigadrain", "bodyslam"]
-            },
+            }
         ]
     },
     "golem": {
