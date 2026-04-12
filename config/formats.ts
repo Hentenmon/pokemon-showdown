@@ -29,6 +29,13 @@ export const Formats: import('../sim/dex-formats').FormatList = [
     	ruleset: ['Standard', 'Mega Clause'],
 		banlist: ["Uber", "AG"],
 	},
+	{
+		name: "[Gen 1] Extinction Red Random Battle",
+		mod: 'gen1extinctionred',
+		team: 'random',
+		bestOfDefault: true,
+		ruleset: ['Standard'],
+	}
 
 	// Likeshop Spotlight
 	///////////////////////////////////////////////////////////////////

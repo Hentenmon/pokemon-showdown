@@ -87,16 +87,16 @@
 		]
     },
     "butterfree": {
-        "level": 85,
+        "level": 90,
         "sets": [
             {
-                "role": "Infestation Spammer",
+                "role": "Wrap Spammer",
                 "movepool": ["infestation", "dazzlinggleam", "sleeppowder", "stunspore"]
             }
         ]
     },
     "beedrill": {
-        "level": 87,
+        "level": 93,
         "sets": [
             {
                 "role": "Crit Abuser",
@@ -296,6 +296,15 @@
             }
         ]
     },
+    "ninetalesalola": {
+        "level": 78,
+        "sets": [
+            {
+                "role": "Sleeper",
+                "movepool": ["hypnosis", "icebeam", "bodyslam", "moonblast"]
+            }
+        ]
+    },
     "wigglytuff": {
         "level": 82,
         "sets": [
@@ -328,7 +337,7 @@
         ]
     },
     "bellossom": {
-        "level": 82,
+        "level": 87,
         "sets": [
             {
                 "role": "Special Sweeper",
@@ -381,6 +390,15 @@
             {
                 "role": "Physical Attacker",
                 "movepool": ["earthquake", "rockslide", "sludgebomb", "ironhead"]
+            }
+        ]
+    },
+    "wugtrio": {
+        "level": 80,
+        "sets": [
+            {
+                "role": "Mixed Attacker",
+                "movepool": ["earthquake", "rockslide", "sludgebomb", "scald"]
             }
         ]
     },
@@ -450,281 +468,1063 @@
         ]
     },
     "arcanine": {
-        "level": 75,
-        "moves": ["bodyslam", "fireblast", "hyperbeam"],
-        "exclusiveMoves": ["agility", "agility", "flamethrower", "flamethrower", "reflect", "rest"]
+        "level": 80,
+        "sets": [
+            {
+                "role": "All-Out Attacker",
+                "movepool": ["willowisp", "flareblitz", "extremespeed", "shadowball"]
+            },
+            {
+                "role": "Agility Sweeper",
+                "movepool": ["agility", "fireblast", "darkpulse", "playrough"]
+            }
+        ]
+    },
+    "arcaninehisui": {
+        "level": 82,
+        "sets": [
+            {
+                "role": "All-Out Attacker",
+                "movepool": ["willowisp", "flareblitz", "headsmash", "shadowball"]
+            },
+            {
+                "role": "Agility Sweeper",
+                "movepool": ["agility", "fireblast", "stoneedge", "playrough"]
+            }
+        ]
     },
     "poliwrath": {
-        "level": 74,
-        "moves": ["bodyslam", "earthquake", "hypnosis", "submission"],
-        "essentialMoves": ["blizzard", "surf"],
-        "comboMoves": ["amnesia", "blizzard", "hypnosis", "surf"]
+        "level": 77,
+        "sets": [
+            {
+                "role": "Special Sweeper",
+                "movepool": ["amnesia", "scald", "icebeam", "earthquake"]
+            }
+        ]
+    },
+    "politoed": {
+        "level": 77,
+        "sets": [
+            {
+                "role": "Special Sweeper",
+                "movepool": ["amnesia", "scald", "icebeam", "earthquake"]
+            }
+        ]
     },
     "alakazam": {
         "level": 68,
-        "moves": ["psychic", "recover", "thunderwave"],
-        "exclusiveMoves": ["counter", "reflect", "reflect", "seismictoss", "seismictoss"]
+        "sets": [
+            {
+                "role": "Special Attacker",
+                "movepool": ["psychocut", "dazzlinggleam", "firepunch", "thunderwave"]
+            }
+        ]
+    },
+    "alakazammega": {
+        "level": 63,
+        "sets": [
+            {
+                "role": "Special Attacker",
+                "movepool": ["psychocut", "dazzlinggleam", "firepunch", "thunderwave"]
+            }
+        ]
     },
     "machamp": {
         "level": 76,
-        "moves": ["bodyslam", "earthquake", "submission"],
-        "exclusiveMoves": ["counter", "hyperbeam", "hyperbeam", "rockslide", "rockslide"]
+        "sets": [
+            {
+                "role": "Physical Attacker",
+                "movepool": ["bulletpunch", "drainpunch", "earthquake", "rockslide"]
+            },
+            {
+                "role": "Crit Abuser",
+                "movepool": ["bulletpunch", "superpower", "focusenergy", "rockslide"]
+            }
+        ]
     },
     "victreebel": {
         "level": 74,
-        "moves": ["bodyslam", "razorleaf", "sleeppowder"],
-        "exclusiveMoves": ["hyperbeam", "stunspore", "stunspore", "stunspore", "swordsdance", "swordsdance"]
+        "sets": [
+            {
+                "role": "Physical Sweeper",
+                "movepool": ["swordsdance", "sludgebomb", "xscissor", "sleeppowder"]
+            },
+            {
+                "role": "Wrap Spammer",
+                "movepool": ["sleeppowder", "wrap", "sludgebomb", "gigadrain"]
+            }
+        ]
+    },
+    "victreebelmega": {
+        "level": 68,
+        "sets": [
+            {
+                "role": "Physical Sweeper",
+                "movepool": ["swordsdance", "sludgebomb", "xscissor", "sleeppowder"]
+            },
+            {
+                "role": "Wrap Spammer",
+                "movepool": ["sleeppowder", "wrap", "sludgebomb", "gigadrain"]
+            }
+        ]
     },
     "tentacruel": {
         "level": 73,
-        "moves": ["blizzard", "hyperbeam", "swordsdance"],
-        "exclusiveMoves": ["hydropump", "surf", "surf"]
+        "sets": [
+            {
+                "role": "Wrap Spammer",
+                "movepool": ["wrap", "sludgebomb", "scald", "flashcannon"]
+            }
+        ]
+    },
+    "toedscruel": {
+        "level": 65,
+        "sets": [
+            {
+                "role": "Mixed Attacker",
+                "movepool": ["earthquake", "spore", "gigadrain", "bodyslam"]
+            },
+        ]
     },
     "golem": {
-        "level": 71,
-        "moves": ["bodyslam", "earthquake", "explosion", "rockslide"]
+        "level": 78,
+        "sets": [
+            {
+                "role": "Physical Attacker",
+                "movepool": ["earthquake", "explosion", "stoneedge", "drainpunch"]
+            }
+        ]
+    },
+    "golemalola": {
+        "level": 78,
+        "sets": [
+            {
+                "role": "Physical Attacker",
+                "movepool": ["earthquake", "explosion", "stoneedge", "drainpunch"]
+            }
+        ]
     },
     "rapidash": {
-        "level": 75,
-        "moves": ["agility", "bodyslam", "fireblast", "hyperbeam"]
+        "level": 82,
+        "sets": [
+            {
+                "role": "Wrap Spammer",
+                "movepool": ["firespin", "fireblast", "smartstrike", "bodyslam"]
+            },
+            {
+                "role": "All-Out Attacker",
+                "movepool": ["hypnosis", "flareblitz", "smartstrike", "doubleedge"]
+            }
+        ]
+    },
+    "rapidashgalar": {
+        "level": 80,
+        "sets": [
+            {
+                "role": "Bulky Status",
+                "movepool": ["dazzlinggleam", "psychic", "thunderwave", "hypnosis"]
+            }
+        ]
     },
     "slowbro": {
-        "level": 69,
-        "moves": ["blizzard", "psychic", "surf"],
-        "essentialMoves": ["amnesia", "thunderwave"],
-        "comboMoves": ["amnesia", "rest", "surf", "thunderwave"]
+        "level": 73,
+        "sets": [
+            {
+                "role": "Special Sweeper",
+                "movepool": ["amnesia", "thunderwave", "rest", "scald"]
+            },
+            {
+                "role": "Special Attacker",
+                "movepool": ["psychic", "scald", "fireblast", "thunderbolt"]
+            }
+        ]
     },
-    "magneton": {
+    "slowbrogalar": {
+        "level": 75,
+        "sets": [
+            {
+                "role": "Special Sweeper",
+                "movepool": ["amnesia", "thunderwave", "rest", "scald"]
+            },
+            {
+                "role": "Special Attacker",
+                "movepool": ["psychic", "scald", "sludgebomb", "thunderbolt"]
+            }
+        ]
+    },
+    "slowking": {
+        "level": 73,
+        "sets": [
+            {
+                "role": "Special Sweeper",
+                "movepool": ["amnesia", "thunderwave", "rest", "scald"]
+            },
+            {
+                "role": "Special Attacker",
+                "movepool": ["psychic", "scald", "fireblast", "thunderbolt"]
+            }
+        ]
+    },
+    "slowkinggalar": {
+        "level": 75,
+        "sets": [
+            {
+                "role": "Special Sweeper",
+                "movepool": ["amnesia", "thunderwave", "rest", "scald"]
+            },
+            {
+                "role": "Special Attacker",
+                "movepool": ["psychic", "scald", "sludgebomb", "thunderbolt"]
+            }
+        ]
+    },
+    "slowbromega": {
+        "level": 67,
+        "sets": [
+            {
+                "role": "Special Sweeper",
+                "movepool": ["amnesia", "thunderwave", "rest", "scald"]
+            },
+            {
+                "role": "Special Attacker",
+                "movepool": ["psychic", "scald", "fireblast", "thunderbolt"]
+            }
+        ]
+    },
+    "magnezone": {
         "level": 76,
-        "moves": ["thunder", "thunderbolt", "thunderwave"],
-        "exclusiveMoves": ["doubleedge", "hyperbeam", "hyperbeam", "mimic", "rest"]
+        "sets": [
+            {
+                "role": "Special Attacker",
+                "movepool": ["thunderwave", "explosion", "flashcannon", "thunderbolt"]
+            }
+        ]
     },
     "farfetchd": {
-        "level": 78,
-        "moves": ["agility", "bodyslam", "slash", "swordsdance"]
+        "level": 94,
+        "sets": [
+            {
+                "role": "Physical Attacker",
+                "movepool": ["swordsdance", "bodyslam", "bravebird", "roost"]
+            },
+            {
+                "role": "Double Dance",
+                "movepool": ["swordsdance", "agility", "roost", "bravebird"]
+            }
+        ]
     },
     "dodrio": {
-        "level": 73,
-        "moves": ["agility", "bodyslam", "drillpeck", "hyperbeam"]
+        "level": 80,
+        "sets": [
+            {
+                "role": "Physical Attacker",
+                "movepool": ["swordsdance", "bodyslam", "drillpeck", "jumpkick"]
+            },
+            {
+                "role": "Double Dance",
+                "movepool": ["swordsdance", "agility", "roost", "drillpeck"]
+            },
+            {
+                "role": "Extreme Killer",
+                "movepool": ["swordsdance", "extremespeed", "jumpkick", "drillpeck"]
+            }
+        ]
     },
     "dewgong": {
-        "level": 74,
-        "moves": ["blizzard", "bodyslam", "surf"],
-        "exclusiveMoves": ["hyperbeam", "rest", "rest", "rest"]
+        "level": 83,
+        "sets": [
+            {
+                "role": "Bulky Status",
+                "movepool": ["scald", "icebeam", "rest", "bodyslam"]
+            }
+        ]
     },
     "muk": {
-        "level": 76,
-        "moves": ["fireblast", "fireblast", "hyperbeam", "megadrain", "megadrain", "sludge", "sludge", "sludge", "thunderbolt"],
-        "essentialMoves": ["bodyslam", "explosion"]
+        "level": 83,
+        "sets": [
+            {
+                "role": "Mixed Attacker",
+                "movepool": ["sludgebomb", "explosion", "fireblast", "thunderbolt"]
+            }
+        ]
+    },
+    "mukalola": {
+        "level": 80,
+        "sets": [
+            {
+                "role": "Mixed Attacker",
+                "movepool": ["sludgebomb", "explosion", "fireblast", "darkpulse"]
+            }
+        ]
     },
     "cloyster": {
-        "level": 70,
-        "moves": ["blizzard", "explosion", "surf"],
-        "exclusiveMoves": ["doubleedge", "hyperbeam", "hyperbeam"]
+        "level": 75,
+        "sets": [
+            {
+                "role": "Wrap Spammer",
+                "movepool": ["clamp", "explosion", "icebeam", "surf"]
+            }
+        ]
     },
     "gengar": {
         "level": 68,
-        "moves": ["hypnosis", "psychic", "thunderbolt"],
-        "exclusiveMoves": ["explosion", "explosion", "megadrain", "nightshade"]
+        "sets": [
+            {
+                "role": "Special Attacker",
+                "movepool": ["psychic", "shadowclaw", "dazzlinggleam", "willowisp"]
+            },
+            {
+                "role": "Sleeper",
+                "movepool": ["hypnosis", "explosion", "psychic", "shadowclaw"]
+            }
+        ]
     },
-    "onix": {
-        "level": 80,
-        "moves": ["bodyslam", "earthquake", "explosion", "rockslide"]
+    "gengarmega": {
+        "level": 60,
+        "sets": [
+            {
+                "role": "Special Attacker",
+                "movepool": ["psychic", "shadowclaw", "dazzlinggleam", "willowisp"]
+            },
+            {
+                "role": "Sleeper",
+                "movepool": ["hypnosis", "explosion", "psychic", "shadowclaw"]
+            }
+        ]
+    },
+    "steelix": {
+        "level": 73,
+        "sets": [
+            {
+                "role": "Physical Attacker",
+                "movepool": ["earthquake", "ironhead", "stoneedge", "reflect"]
+            }
+        ]
+    },
+    "steelixmega": {
+        "level": 68,
+        "sets": [
+            {
+                "role": "Physical Wall",
+                "movepool": ["earthquake", "ironhead", "rockslide", "barrier"]
+            }
+        ]
     },
     "hypno": {
-        "level": 72,
-        "moves": ["hypnosis", "psychic", "thunderwave"],
-        "exclusiveMoves": ["counter", "rest", "rest", "seismictoss", "seismictoss"]
+        "level": 76,
+        "sets": [
+            {
+                "role": "Sleeper",
+                "movepool": ["psychic", "hypnosis", "thunderwave", "dazzlinggleam"]
+            }
+        ]
     },
     "kingler": {
         "level": 76,
-        "moves": ["bodyslam", "crabhammer", "hyperbeam", "swordsdance"]
+        "sets": [
+            {
+                "role": "Physical Sweeper",
+                "movepool": ["crabhammer", "swordsdance", "hyperbeam", "superpower"]
+            }
+        ]
     },
     "electrode": {
-        "level": 76,
-        "moves": ["explosion", "thunderbolt", "thunderwave"],
-        "exclusiveMoves": ["hyperbeam", "hyperbeam", "takedown", "thunder", "thunder"]
+        "level": 85,
+        "sets": [
+            {
+                "role": "Mixed Attacker",
+                "movepool": ["wildcharge", "explosion", "doubleedge", "thunderwave"]
+            }
+        ]
+    },
+    "electrodehisui": {
+        "level": 75,
+        "sets": [
+            {
+                "role": "Mixed Attacker",
+                "movepool": ["thunderbolt", "explosion", "leafstorm", "thunderwave"]
+            }
+        ]
     },
     "exeggutor": {
-        "level": 68,
-        "moves": ["explosion", "psychic", "sleeppowder"],
-        "exclusiveMoves": ["doubleedge", "hyperbeam", "megadrain", "stunspore", "stunspore", "stunspore"]
+        "level": 74,
+        "sets": [
+            {
+                "role": "Sleeper",
+                "movepool": ["sleeppowder", "explosion", "psychic", "gigadrain"]
+            }
+        ]
+    },
+    "exeggutoralola": {
+        "level": 72,
+        "sets": [
+            {
+                "role": "Sleeper",
+                "movepool": ["sleeppowder", "explosion", "dragonhammer", "gigadrain"]
+            }
+        ]
     },
     "marowak": {
-        "level": 79,
-        "moves": ["blizzard", "bodyslam", "earthquake", "seismictoss"]
+        "level": 87,
+        "sets": [
+            {
+                "role": "Physical Attacker",
+                "movepool": ["earthquake", "drainpunch", "rockslide", "swordsdance"]
+            },
+            {
+                "role": "Crit Abuser",
+                "movepool": ["earthquake", "focusenergy", "superpower", "rockslide"]
+            }
+        ]
+    },
+    "marowakalola": {
+        "level": 75,
+        "sets": [
+            {
+                "role": "Mixed Attacker",
+                "movepool": ["shadowclaw", "flamethrower", "shadowsneak", "willowisp"]
+            },
+            {
+                "role": "Crit Abuser",
+                "movepool": ["flareblitz", "focusenergy", "shadowsneak", "shadowball"]
+            }
+        ]
     },
     "hitmonlee": {
         "level": 78,
-        "moves": ["bodyslam", "highjumpkick", "seismictoss"],
-        "exclusiveMoves": ["counter", "counter", "meditate", "megakick", "rollingkick"]
+        "sets": [
+            {
+                "role": "Physical Attacker",
+                "movepool": ["highjumpkick", "rockslide", "machpunch", "bulletpunch"]
+            },
+            {
+                "role": "Crit Abuser",
+                "movepool": ["superpower", "focusenergy", "rockslide", "bulletpunch"]
+            }
+        ]
     },
     "hitmonchan": {
         "level": 80,
-        "moves": ["bodyslam", "seismictoss", "submission"],
-        "exclusiveMoves": ["agility", "agility", "counter", "counter", "megakick"]
+        "sets": [
+            {
+                "role": "Physical Attacker",
+                "movepool": ["drainpunch", "hyperbeam", "bodyslam", "bulletpunch"]
+            }
+        ]
     },
-    "lickitung": {
+    "hitmontop": {
         "level": 78,
-        "moves": ["bodyslam", "hyperbeam", "swordsdance"],
-        "exclusiveMoves": ["blizzard", "earthquake", "earthquake", "earthquake"]
+        "sets": [
+            {
+                "role": "Physical Attacker",
+                "movepool": ["highjumpkick", "rockslide", "machpunch", "shadowball"]
+            },
+            {
+                "role": "Crit Abuser",
+                "movepool": ["superpower", "focusenergy", "rockslide", "closecombat"]
+            }
+        ]
+    },
+    "lickilicky": {
+        "level": 75,
+        "sets": [
+            {
+                "role": "Physical Attacker",
+                "movepool": ["swordsdance", "bodyslam", "earthquake", "wrap"]
+            },
+            {
+                "role": "Special Sweeper",
+                "movepool": ["amnesia", "thunderbolt", "icebeam", "scald"]
+            }
+        ]
     },
     "weezing": {
-        "level": 76,
-        "moves": ["explosion", "fireblast", "sludge", "thunderbolt"]
+        "level": 78,
+        "sets": [
+            {
+                "role": "Mixed Attacker",
+                "movepool": ["explosion", "willowisp", "sludgebomb", "fireblast"]
+            }
+        ]
     },
-    "rhydon": {
-        "level": 71,
-        "moves": ["bodyslam", "earthquake", "rockslide", "substitute"]
+    "weezinggalar": {
+        "level": 73,
+        "sets": [
+            {
+                "role": "Mixed Attacker",
+                "movepool": ["explosion", "willowisp", "sludgebomb", "dazzlinggleam"]
+            }
+        ]
     },
-    "chansey": {
+    "rhyperior": {
         "level": 68,
-        "moves": ["icebeam", "softboiled", "thunderwave"],
-        "exclusiveMoves": ["counter", "reflect", "seismictoss", "sing", "thunderbolt", "thunderbolt", "thunderbolt"]
+        "sets": [
+            {
+                "role": "Physical Attacker",
+                "movepool": ["earthquake", "rockslide", "bodyslam", "substitute"]
+            }
+        ]
     },
-    "tangela": {
-        "level": 74,
-        "moves": ["bodyslam", "megadrain", "sleeppowder"],
-        "exclusiveMoves": ["stunspore", "stunspore", "swordsdance"]
+    "blissey": {
+        "level": 68,
+        "sets": [
+            {
+                "role": "Special Attacker",
+                "movepool": ["icebeam", "softboiled", "thunderwave", "sing"]
+            }
+        ]
+    },
+    "tangrowth": {
+        "level": 75,
+        "sets": [
+            {
+                "role": "Physical Sweeper",
+                "movepool": ["sleeppowder", "swordsdance", "shadowball", "sludgebomb"]
+            },
+            {
+                "role": "Special Attacker",
+                "movepool": ["sleeppowder", "energyball", "leafstorm", "bind"]
+            }
+        ]
     },
     "kangaskhan": {
         "level": 73,
-        "moves": ["bodyslam", "earthquake", "hyperbeam"],
-        "exclusiveMoves": ["counter", "rockslide", "rockslide", "surf"]
+        "sets": [
+            {
+                "role": "Physical Attacker",
+                "movepool": ["earthquake", "bodyslam", "hyperbeam", "scald"]
+            }
+        ]
     },
-    "seadra": {
+    "kangaskhanmega": {
+        "level": 68,
+        "sets": [
+            {
+                "role": "Physical Attacker",
+                "movepool": ["earthquake", "bodyslam", "hyperbeam", "scald"]
+            }
+        ]
+    },
+    "kingdra": {
         "level": 77,
-        "moves": ["agility", "blizzard", "surf"],
-        "exclusiveMoves": ["doubleedge", "hydropump", "hyperbeam", "rest", "smokescreen"]
+        "sets": [
+            {
+                "role": "Crit Abuser",
+                "movepool": ["focusenergy", "dracometeor", "scald", "icebeam"]
+            }
+        ]
     },
     "seaking": {
-        "level": 78,
-        "moves": ["agility", "doubleedge", "hyperbeam"],
-        "essentialMoves": ["blizzard", "surf"]
+        "level": 82,
+        "sets": [
+            {
+                "role": "Special Attacker",
+                "movepool": ["aquajet", "icebeam", "agility", "scald"]
+            }
+        ]
     },
     "starmie": {
-        "level": 68,
-        "moves": ["blizzard", "psychic", "thunderbolt"],
-        "essentialMoves": ["recover", "thunderwave"],
-        "exclusiveMoves": ["hydropump", "psychic", "surf", "surf"]
+        "level": 70,
+        "sets": [
+            {
+                "role": "Special Attacker",
+                "movepool": ["psychic", "scald", "thunderbolt", "icebeam"]
+            }
+        ]
+    },
+    "starmiemega": {
+        "level": 62,
+        "sets": [
+            {
+                "role": "Physical Attacker",
+                "movepool": ["closecombat", "shadowball", "aquajet", "earthquake"]
+            }
+        ]
     },
     "mrmime": {
         "level": 75,
-        "moves": ["psychic", "seismictoss", "thunderbolt", "thunderwave"]
+        "sets": [
+            {
+                "role": "Special Attacker",
+                "movepool": ["psychic", "dazzlinggleam", "darkpulse", "firepunch"]
+            }
+        ]
     },
     "scyther": {
         "level": 75,
-        "moves": ["agility", "hyperbeam", "slash", "swordsdance"]
+        "sets": [
+            {
+                "role": "Physical Sweeper",
+                "movepool": ["xscissor", "swordsdance", "airslash", "shadowball"]
+            },
+            {
+                "role": "Crit Abuser",
+                "movepool": ["xscissor", "focusenergy", "hyperbeam", "superpower"]
+            }
+        ]
+    },
+    "scizor": {
+        "level": 68,
+        "sets": [
+            {
+                "role": "Physical Sweeper",
+                "movepool": ["xscissor", "swordsdance", "bulletpunch", "shadowball"]
+            },
+            {
+                "role": "Crit Abuser",
+                "movepool": ["xscissor", "focusenergy", "bulletpunch", "superpower"]
+            }
+        ]
+    },
+    "scizormega": {
+        "level": 62,
+        "sets": [
+            {
+                "role": "Physical Sweeper",
+                "movepool": ["xscissor", "swordsdance", "bulletpunch", "shadowball"]
+            },
+            {
+                "role": "Crit Abuser",
+                "movepool": ["xscissor", "focusenergy", "bulletpunch", "superpower"]
+            }
+        ]
+    },
+    "kleavor": {
+        "level": 72,
+        "sets": [
+            {
+                "role": "Physical Sweeper",
+                "movepool": ["xscissor", "swordsdance", "stoneedge", "shadowball"]
+            },
+            {
+                "role": "Crit Abuser",
+                "movepool": ["xscissor", "focusenergy", "rockslide", "superpower"]
+            }
+        ]
     },
     "jynx": {
-        "level": 68,
-        "moves": ["blizzard", "lovelykiss", "psychic"],
-        "exclusiveMoves": ["bodyslam", "counter", "counter", "seismictoss", "substitute"]
+        "level": 72,
+        "sets": [
+            {
+                "role": "Sleeper",
+                "movepool": ["lovelykiss", "icebeam", "psychic", "dazzlinggleam"]
+            }
+        ]
     },
-    "electabuzz": {
-        "level": 74,
-        "moves": ["psychic", "thunderbolt", "thunderwave"],
-        "exclusiveMoves": ["hyperbeam", "seismictoss", "seismictoss", "seismictoss"]
+    "electivire": {
+        "level": 70,
+        "sets": [
+            {
+                "role": "Mixed Attacker",
+                "movepool": ["thunderbolt", "thunderwave", "firepunch", "drainpunch"]
+            }
+        ]
     },
-    "magmar": {
-        "level": 76,
-        "moves": ["bodyslam", "confuseray", "fireblast"],
-        "exclusiveMoves": ["hyperbeam", "psychic", "seismictoss"]
+    "magmortar": {
+        "level": 70,
+        "sets": [
+            {
+                "role": "Mixed Attacker",
+                "movepool": ["thunderpunch", "willowisp", "flareblitz", "closecombat"]
+            }
+        ]
     },
     "pinsir": {
-        "level": 75,
-        "moves": ["bodyslam", "bodyslam", "slash"],
-        "essentialMoves": ["hyperbeam", "swordsdance"],
-        "exclusiveMoves": ["seismictoss", "submission", "submission"]
+        "level": 80,
+        "sets": [
+            {
+                "role": "Physical Sweeper",
+                "movepool": ["xscissor", "drainpunch", "earthquake", "swordsdance"]
+            },
+            {
+                "role": "Physical Attacker",
+                "movepool": ["xscissor", "drainpunch", "earthquake", "rockslide"]
+            },
+            {
+                "role": "Crit Abuser",
+                "movepool": ["xscissor", "superpower", "earthquake", "focusenergy"]
+            }
+        ]
     },
     "tauros": {
-        "level": 68,
-        "moves": ["bodyslam", "earthquake", "hyperbeam"],
-        "exclusiveMoves": ["blizzard", "blizzard", "blizzard", "thunderbolt"]
+        "level": 73,
+        "sets": [
+            {
+                "role": "Mixed Attacker",
+                "movepool": ["bodyslam", "hyperbeam", "earthquake", "scald"]
+            }
+        ]
+    },
+    "taurospaldeacombat": {
+        "level": 73,
+        "sets": [
+            {
+                "role": "Mixed Attacker",
+                "movepool": ["bodyslam", "closecombat", "earthquake", "scald"]
+            }
+        ]
+    },
+    "taurospaldeaaqua": {
+        "level": 73,
+        "sets": [
+            {
+                "role": "Mixed Attacker",
+                "movepool": ["bodyslam", "closecombat", "earthquake", "scald"]
+            }
+        ]
+    },
+    "taurospaldeablaze": {
+        "level": 73,
+        "sets": [
+            {
+                "role": "Mixed Attacker",
+                "movepool": ["bodyslam", "closecombat", "earthquake", "flareblitz"]
+            }
+        ]
     },
     "gyarados": {
         "level": 74,
-        "moves": ["blizzard", "bodyslam", "bodyslam", "hyperbeam", "thunderbolt"],
-        "exclusiveMoves": ["hydropump", "surf", "surf"]
+        "sets": [
+            {
+                "role": "Mixed Attacker",
+                "movepool": ["roost", "scald", "earthquake", "icebeam"]
+            }
+        ]
+    },
+    "gyaradosmega": {
+        "level": 68,
+        "sets": [
+            {
+                "role": "Mixed Attacker",
+                "movepool": ["roost", "scald", "nightslash", "icebeam"]
+            }
+        ]
     },
     "lapras": {
-        "level": 69,
-        "moves": ["bodyslam", "rest", "sing", "surf"],
-        "essentialMoves": ["blizzard", "thunderbolt"]
+        "level": 76,
+        "sets": [
+            {
+                "role": "Sleeper",
+                "movepool": ["sing", "iciclecrash", "scald", "earthquake"]
+            }
+        ]
     },
     "ditto": {
         "level": 100,
-        "moves": ["transform"]
+        "sets": [
+            {
+                "role": "Transform",
+                "movepool": ["transform"]
+            }
+        ]
     },
     "vaporeon": {
-        "level": 74,
-        "moves": ["blizzard", "rest", "surf"],
-        "exclusiveMoves": ["acidarmor", "bodyslam", "bodyslam", "bodyslam", "hydropump", "mimic"]
+        "level": 73,
+        "sets": [
+            {
+                "role": "Special Attacker",
+                "movepool": ["icebeam", "scald", "bodyslam", "haze"]
+            }
+        ]
     },
     "jolteon": {
-        "level": 69,
-        "moves": ["bodyslam", "thunderbolt", "thunderwave"],
-        "exclusiveMoves": ["agility", "agility", "doublekick", "pinmissile", "pinmissile"]
+        "level": 70,
+        "sets": [
+            {
+                "role": "Special Attacker",
+                "movepool": ["thunderbolt", "thunder", "bodyslam", "thunderwave"]
+            }
+        ]
     },
     "flareon": {
-        "level": 76,
-        "moves": ["bodyslam", "fireblast", "hyperbeam", "quickattack"]
+        "level": 79,
+        "sets": [
+            {
+                "role": "Mixed Attacker",
+                "movepool": ["fireblast", "hyperbeam", "shadowball", "willowisp"]
+            }
+        ]
     },
-    "porygon": {
-        "level": 76,
-        "moves": ["blizzard", "recover", "thunderwave"],
-        "exclusiveMoves": ["doubleedge", "psychic", "thunderbolt", "triattack"]
+    "espeon": {
+        "level": 74,
+        "sets": [
+            {
+                "role": "Special Attacker",
+                "movepool": ["psychic", "dazzlinggleam", "bodyslam", "mudslap"]
+            }
+        ]
+    },
+    "umbreon": {
+        "level": 82,
+        "sets": [
+            {
+                "role": "Special Attacker",
+                "movepool": ["nightslash", "confuseray", "bodyslam", "mudslap"]
+            }
+        ]
+    },
+    "leafeon": {
+        "level": 72,
+        "sets": [
+            {
+                "role": "Special Attacker",
+                "movepool": ["leafstorm", "gigadrain", "bodyslam", "mudslap"]
+            }
+        ]
+    },
+    "glaceon": {
+        "level": 72,
+        "sets": [
+            {
+                "role": "Special Attacker",
+                "movepool": ["blizzard", "icebeam", "bodyslam", "mudslap"]
+            }
+        ]
+    },
+    "sylveon": {
+        "level": 67,
+        "sets": [
+            {
+                "role": "Special Attacker",
+                "movepool": ["moonblast", "drainingkiss", "bodyslam", "mudslap"]
+            }
+        ]
+    },
+    "porygonz": {
+        "level": 67,
+        "sets": [
+            {
+                "role": "Agility Sweeper",
+                "movepool": ["agility", "icebeam", "thunderbolt", "triattack"]
+            }
+        ]
     },
     "omastar": {
-        "level": 74,
-        "moves": ["bodyslam", "rest", "seismictoss"],
-        "essentialMoves": ["blizzard"],
-        "exclusiveMoves": ["hydropump", "surf"]
+        "level": 78,
+        "sets": [
+            {
+                "role": "Special Attacker",
+                "movepool": ["scald", "icebeam", "rocktomb", "bodyslam"]
+            }
+        ]
     },
     "kabutops": {
         "level": 75,
-        "moves": ["hyperbeam", "surf", "swordsdance"],
-        "exclusiveMoves": ["bodyslam", "slash"]
+        "sets": [
+            {
+                "role": "Physical Sweeper",
+                "movepool": ["swordsdance", "aquajet", "rockslide", "earthquake"]
+            },
+            {
+                "role": "Physical Attacker",
+                "movepool": ["stoneedge", "aquajet", "xscissor", "earthquake"]
+            }
+        ]
     },
     "aerodactyl": {
-        "level": 75,
-        "moves": ["doubleedge", "fireblast", "hyperbeam"],
-        "exclusiveMoves": ["agility", "skyattack", "skyattack"]
+        "level": 67,
+        "sets": [
+            {
+                "role": "Physical Attacker",
+                "movepool": ["rockslide", "airslash", "earthquake", "roost"]
+            }
+        ]
+    },
+    "aerodactylmega": {
+        "level": 62,
+        "sets": [
+            {
+                "role": "All-Out Attacker",
+                "movepool": ["headsmash", "bravebird", "earthquake", "hyperbeam"]
+            }
+        ]
     },
     "snorlax": {
-        "level": 69,
-        "moves": ["amnesia", "blizzard", "bodyslam"],
-        "exclusiveMoves": ["rest", "selfdestruct"],
-        "comboMoves": ["bodyslam", "earthquake", "hyperbeam", "selfdestruct"]
+        "level": 65,
+        "sets": [
+            {
+                "role": "Physical Attacker",
+                "movepool": ["bodyslam", "hyperbeam", "earthquake", "rest"]
+            },
+            {
+                "role": "Special Sweeper",
+                "movepool": ["amnesia", "rest", "icebeam", "scald"]
+            }
+        ]
     },
     "articuno": {
         "level": 70,
-        "moves": ["agility", "blizzard", "hyperbeam"],
-        "exclusiveMoves": ["icebeam", "mimic", "reflect"],
-        "comboMoves": ["blizzard", "icebeam", "reflect", "rest"]
+        "sets": [
+            {
+                "role": "Special Attacker",
+                "movepool": ["blizzard", "icebeam", "hurricane", "roost"]
+            }
+        ]
+    },
+    "articunogalar": {
+        "level": 70,
+        "sets": [
+            {
+                "role": "Special Attacker",
+                "movepool": ["freezingglare", "icebeam", "hurricane", "roost"]
+            }
+        ]
     },
     "zapdos": {
         "level": 68,
-        "moves": ["agility", "drillpeck", "thunderbolt", "thunderwave"]
+        "sets": [
+            {
+                "role": "Mixed Attacker",
+                "movepool": ["thunderbolt", "thunderwave", "drillpeck", "roost"]
+            }
+        ]
+    },
+    "zapdosgalar": {
+        "level": 74,
+        "sets": [
+            {
+                "role": "Physical Attacker",
+                "movepool": ["thunderouskick", "drillpeck", "hyperbeam", "roost"]
+            },
+            {
+                "role": "Crit Abuser",
+                "movepool": ["focusenergy", "superpower", "hurricane", "doubleedge"]
+            }
+        ]
     },
     "moltres": {
         "level": 73,
-        "moves": ["agility", "fireblast", "hyperbeam"],
-        "exclusiveMoves": ["doubleedge", "doubleedge", "doubleedge", "reflect"]
+        "sets": [
+            {
+                "role": "Wrap Spammer",
+                "movepool": ["firespin", "roost", "agility", "hyperbeam"]
+            },
+            {
+                "role": "Mixed Attacker",
+                "movepool": ["fireblast", "airslash", "willowisp", "roost"]
+            }
+        ]
+    },
+    "moltresgalar": {
+        "level": 74,
+        "sets": [
+            {
+                "role": "Mixed Attacker",
+                "movepool": ["fierywrath", "airslash", "confuseray", "roost"]
+            }
+        ]
     },
     "dragonite": {
-        "level": 74,
-        "moves": ["bodyslam", "hyperbeam", "thunderbolt", "thunderwave", "thunderwave"],
-        "essentialMoves": ["blizzard"]
+        "level": 68,
+        "sets": [
+            {
+                "role": "Wrap Spammer",
+                "movepool": ["wrap", "agility", "dracometeor", "aerialace"]
+            },
+            {
+                "role": "Agility Sweeper",
+                "movepool": ["agility", "scald", "hurricane", "dracometeor"]
+            }
+        ]
+    },
+    "dragonitemega": {
+        "level": 60,
+        "sets": [
+            {
+                "role": "Wrap Spammer",
+                "movepool": ["wrap", "agility", "dracometeor", "aerialace"]
+            },
+            {
+                "role": "Agility Sweeper",
+                "movepool": ["agility", "scald", "hurricane", "dracometeor"]
+            }
+        ]
+    },
+    "screamtail": {
+        "level": 67,
+        "sets": [
+            {
+                "role": "Special Attacker",
+                "movepool": ["dazzlinggleam", "drainingkiss", "psychic", "sing"]
+            }
+        ]
+    },
+    "sandyshocks": {
+        "level": 72,
+        "sets": [
+            {
+                "role": "Special Attacker",
+                "movepool": ["earthquake", "thunderbolt", "thunderwave", "earthpower"]
+            }
+        ]
+    },
+    "melmetal": {
+        "level": 65,
+        "sets": [
+            {
+                "role": "Physical Attacker",
+                "movepool": ["doubleironbash", "earthquake", "drainpunch", "rockslide"]
+            }
+        ]
     },
     "mewtwo": {
-        "level": 60,
-        "moves": ["amnesia", "psychic", "recover"],
-        "exclusiveMoves": ["blizzard", "thunderbolt", "thunderwave", "thunderwave"]
+        "level": 62,
+        "sets": [
+            {
+                "role": "Special Sweeper",
+                "movepool": ["amnesia", "psystrike", "icebeam", "drainpunch"]
+            },
+            {
+                "role": "Special Attacker",
+                "movepool": ["thunderbolt", "psystrike", "icebeam", "drainpunch"]
+            }
+        ]
+    },
+    "mewtwomegax": {
+        "level": 56,
+        "sets": [
+            {
+                "role": "Special Sweeper",
+                "movepool": ["amnesia", "psystrike", "icebeam", "drainpunch"]
+            },
+            {
+                "role": "Special Attacker",
+                "movepool": ["thunderbolt", "psystrike", "icebeam", "drainpunch"]
+            },
+            {
+                "role": "Physical Attacker",
+                "movepool": ["psystrike", "earthquake", "drainpunch", "shadowball"]
+            }
+        ]
+    },
+    "mewtwomegay": {
+        "level": 50,
+        "sets": [
+            {
+                "role": "Special Sweeper",
+                "movepool": ["amnesia", "psystrike", "icebeam", "drainpunch"]
+            },
+            {
+                "role": "Special Attacker",
+                "movepool": ["thunderbolt", "psystrike", "icebeam", "drainpunch"]
+            }
+        ]
     },
     "mew": {
-        "level": 64,
-        "moves": ["blizzard", "blizzard", "earthquake", "explosion", "explosion", "thunderbolt"],
-        "essentialMoves": ["psychic", "softboiled", "thunderwave"]
+        "level": 60,
+        "sets": [
+            {
+                "role": "Physical Sweeper",
+                "movepool": ["swordsdance", "bodyslam", "earthquake", "flashcannon"]
+            },
+            {
+                "role": "Special Sweeper",
+                "movepool": ["amnesia", "psychic", "blastburn", "dazzlinggleam"]
+            },
+            {
+                "role": "Bulky Status",
+                "movepool": ["thunderwave", "willowisp", "transform", "dazzlinggleam"]
+            }
+        ]
     }
 }
