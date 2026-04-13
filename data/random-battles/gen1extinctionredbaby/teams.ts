@@ -20,7 +20,7 @@ export class RandomGen1BabyTeams extends RandomGen2Teams {
 	// -----------------------
 	// MAIN RANDOM TEAM
 	// -----------------------
-	override randomTeam() {
+	override randomBabyTeam() {
 		this.enforceNoDirectCustomBanlistChanges();
 
 		const pokemon: RandomTeamsTypes.RandomSet[] = [];
