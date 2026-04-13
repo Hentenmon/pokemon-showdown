@@ -397,7 +397,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 	parasect: {
 		inherit: true,
 		types: ['Bug', 'Grass'],
-		baseStats: { hp: 80, atk: 105, def: 110, spa: 100, spd: 100, spe: 30 },
+		baseStats: { hp: 80, atk: 105, def: 110, spa: 80, spd: 80, spe: 30 },
 	},
 	venonat: {
 		inherit: true,
@@ -1253,7 +1253,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		inherit: true,
 		types: ['Dark'],
 		isNonstandard: null,
-		baseStats: { hp: 95, atk: 65, def: 110, spa: 60, spd: 60, spe: 65 },
+		baseStats: { hp: 95, atk: 110, def: 130, spa: 60, spd: 60, spe: 65 },
 	},
 	leafeon: {
 		inherit: true,

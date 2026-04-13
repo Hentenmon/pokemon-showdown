@@ -2697,6 +2697,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 	*/
 	clamp: {
 		inherit: true,
+		category: "Special",
 		accuracy: 75,
 		pp: 10,
 		self: {
@@ -5871,7 +5872,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		num: 7,
 		accuracy: 100,
 		basePower: 75,
-		category: "Physical",
+		category: "Special",
 		name: "Fire Punch",
 		pp: 15,
 		priority: 0,
@@ -9866,7 +9867,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		num: 63,
 		accuracy: 90,
 		basePower: 150,
-		category: "Special",
+		category: "Physical",
 		name: "Hyper Beam",
 		pp: 5,
 		priority: 0,
@@ -10164,7 +10165,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		num: 8,
 		accuracy: 100,
 		basePower: 75,
-		category: "Physical",
+		category: "Special",
 		name: "Ice Punch",
 		pp: 15,
 		priority: 0,
@@ -15935,6 +15936,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 	*/
 	razorleaf: {
 		inherit: true,
+		category: "Special",
 		critRatio: 2,
 		target: "normal",
 	},
@@ -15961,6 +15963,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 	*/
 	razorwind: {
 		inherit: true,
+		category: "Physical",
 		critRatio: 1,
 		target: "normal",
 		onTryMove(attacker, defender, move) {
@@ -20029,7 +20032,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		num: 129,
 		accuracy: true,
 		basePower: 60,
-		category: "Special",
+		category: "Physical",
 		name: "Swift",
 		pp: 20,
 		priority: 0,
@@ -21009,7 +21012,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		num: 9,
 		accuracy: 100,
 		basePower: 75,
-		category: "Physical",
+		category: "Special",
 		name: "Thunder Punch",
 		pp: 15,
 		priority: 0,
@@ -21322,6 +21325,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 	},
 	triattack: {
 		inherit: true,
+		category: "Physical",
 		onHit() {},
 		secondary: null,
 	},
@@ -22026,7 +22030,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		num: 127,
 		accuracy: 100,
 		basePower: 80,
-		category: "Physical",
+		category: "Special",
 		name: "Waterfall",
 		pp: 15,
 		priority: 0,

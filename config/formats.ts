@@ -36,6 +36,13 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		bestOfDefault: true,
 		ruleset: ['Standard'],
 	}
+	{
+		name: "[Gen 1] Extinction Red Baby Random Battle",
+		mod: 'gen1extinctionred',
+		team: 'randombaby',
+		bestOfDefault: true,
+		ruleset: ['Standard'],
+	}
 
 	// Likeshop Spotlight
 	///////////////////////////////////////////////////////////////////

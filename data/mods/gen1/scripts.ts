@@ -724,7 +724,6 @@ export const Scripts: ModdedBattleScriptsData = {
 			if (source.volatiles['partialtrappinglock'] && (target === source.volatiles['partialtrappinglock'].locked)) {
 				return source.volatiles['partialtrappinglock'].damage;
 			}
-
 			// We check the category and typing to calculate later on the damage.
 			if (!move.category) move.category = 'Physical';
 			// '???' is typeless damage: used for Struggle and Confusion etc

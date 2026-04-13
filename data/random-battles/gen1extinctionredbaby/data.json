@@ -1,0 +1,722 @@
+{
+	"bulbasaur": {
+		"level": 5,
+		"sets": [
+			{
+				"role": "Sleeper",
+				"movepool": ["sleeppowder", "bodyslam", "sludgebomb", "razorleaf"]
+			}
+		]
+	},
+	"charmander": {
+		"level": 5,
+		"sets": [
+			{
+				"role": "Special Attacker",
+				"movepool": ["dragonclaw", "flareblitz", "willowisp", "thunderpunch"]
+			}
+		]
+	},
+	"squirtle": {
+		"level": 6,
+		"sets": [
+			{
+				"role": "Special Attacker",
+				"movepool": ["icebeam", "scald", "darkpulse", "doubleedge"]
+			}
+		]
+	},
+	"caterpie": {
+		"level": 9,
+		"sets": [
+			{
+				"role": "Physical Attacker",
+				"movepool": ["tackle", "stringshot", "bugbite", "cut"]
+			}
+		]
+	},
+	"weedle": {
+		"level": 9,
+		"sets": [
+			{
+				"role": "Physical Attacker",
+				"movepool": ["poisonsting", "stringshot", "bugbite", "cut"]
+			}
+		]
+	},
+	"pidgey": {
+		"level": 7,
+		"sets": [
+			{
+				"role": "Physical Attacker",
+				"movepool": ["doubleedge", "extremespeed", "hurricane", "quickattack"]
+			}
+		]
+	},
+	"rattata": {
+		"level": 6,
+		"sets": [
+			{
+				"role": "Mixed Attacker",
+				"movepool": ["icebeam", "crunch", "doubleedge", "superfang"]
+			}
+		]
+	},
+	"rattataalola": {
+		"level": 5,
+		"sets": [
+			{
+				"role": "Mixed Attacker",
+				"movepool": ["icebeam", "darkpulse", "doubleedge", "superfang"]
+			}
+		]
+	},
+	"spearow": {
+		"level": 6,
+		"sets": [
+			{
+				"role": "Physical Attacker",
+				"movepool": ["drillpeck", "doubleedge", "substitute", "mudslap"]
+			}
+		]
+	},
+	"ekans": {
+		"level": 5,
+		"sets": [
+			{
+				"role": "Mixed Attacker",
+				"movepool": ["fireblast", "sludgebomb", "leechlife", "gigadrain"]
+			}
+		]
+	},
+	"pichu": {
+		"level": 7,
+		"sets": [
+			{
+				"role": "Special Attacker",
+				"movepool": ["thunder", "surf", "doubleedge", "thunderwave"]
+			}
+		]
+	},
+	"sandshrew": {
+		"level": 5,
+		"sets": [
+			{
+				"role": "Physical Sweeper",
+				"movepool": ["swordsdance", "earthquake", "xscissor", "doubleedge"]
+			}
+		]
+	},
+	"sandshrewalola": {
+		"level": 6,
+		"sets": [
+			{
+				"role": "Physical Sweeper",
+				"movepool": ["swordsdance", "earthquake", "xscissor", "icebeam"]
+			}
+		]
+	},
+	"nidoranm": {
+		"level": 5,
+		"sets": [
+			{
+				"role": "Mixed Attacker",
+				"movepool": ["sludgebomb", "earthpower", "fireblast", "icebeam"]
+			}
+		]
+	},
+	"nidoranf": {
+		"level": 6,
+		"sets": [
+			{
+				"role": "Mixed Attacker",
+				"movepool": ["sludgebomb", "earthpower", "fireblast", "icebeam"]
+			}
+		]
+	},
+	"cleffa": {
+		"level": 7,
+		"sets": [
+			{
+				"role": "Sleeper",
+				"movepool": ["sing", "dazzlinggleam", "fireblast", "psychic"]
+			}
+		]
+	},
+	"vulpix": {
+		"level": 6,
+		"sets": [
+			{
+				"role": "Sleeper",
+				"movepool": ["hypnosis", "willowisp", "fireblast", "darkpulse"]
+			}
+		]
+	},
+	"vulpixalola": {
+		"level": 5,
+		"sets": [
+			{
+				"role": "Sleeper",
+				"movepool": ["hypnosis", "shadowball", "icebeam", "moonblast"]
+			}
+		]
+	},
+	"igglybuff": {
+		"level": 8,
+		"sets": [
+			{
+				"role": "Sleeper",
+				"movepool": ["sing", "dazzlinggleam", "bodyslam", "fireblast"]
+			}
+		]
+	},
+	"zubat": {
+		"level": 7,
+		"sets": [
+			{
+				"role": "Sleeper",
+				"movepool": ["hypnosis", "aircutter", "sludgebomb", "darkpulse"]
+			}
+		]
+	},
+	"oddish": {
+		"level": 6,
+		"sets": [
+			{
+				"role": "Special Attacker",
+				"movepool": ["sleeppowder", "sludgebomb", "moonblast", "gigadrain"]
+			}
+		]
+	},
+	"paras": {
+		"level": 6,
+		"sets": [
+			{
+				"role": "Sleeper",
+				"movepool": ["spore", "leechlife", "gigadrain", "rocktomb"]
+			}
+		]
+	},
+	"venonat": {
+		"level": 6,
+		"sets": [
+			{
+				"role": "Sleeper",
+				"movepool": ["sleeppowder", "psychic", "leechlife", "sludgebomb"]
+			}
+		]
+	},
+	"diglett": {
+		"level": 5,
+		"sets": [
+			{
+				"role": "Physical Attacker",
+				"movepool": ["earthquake", "rockslide", "sludgebomb", "slash"]
+			}
+		]
+	},
+	"diglettalola": {
+		"level": 5,
+		"sets": [
+			{
+				"role": "Physical Attacker",
+				"movepool": ["earthquake", "rockslide", "sludgebomb", "ironhead"]
+			}
+		]
+	},
+	"wiglett": {
+		"level": 5,
+		"sets": [
+			{
+				"role": "Physical Attacker",
+				"movepool": ["earthquake", "rockslide", "sludgebomb", "scald"]
+			}
+		]
+	},
+	"meowth": {
+		"level": 5,
+		"sets": [
+			{
+				"role": "Mixed Attacker",
+				"movepool": ["slash", "playrough", "shadowball", "scald"]
+			}
+		]
+	},
+	"meowthalola": {
+		"level": 5,
+		"sets": [
+			{
+				"role": "Mixed Attacker",
+				"movepool": ["nightslash", "playrough", "aerialace", "irontail"]
+			}
+		]
+	},
+	"meowthgalar": {
+		"level": 5,
+		"sets": [
+			{
+				"role": "Physical Attacker",
+				"movepool": ["ironhead", "earthquake", "aerialace", "bulletpunch"]
+			}
+		]
+	},
+	"psyduck": {
+		"level": 6,
+		"sets": [
+			{
+				"role": "Mixed Attacker",
+				"movepool": ["scald", "icebeam", "zenheadbutt", "rocktomb"]
+			}
+		]
+	},
+	"mankey": {
+		"level": 5,
+		"sets": [
+			{
+				"role": "Physical Attacker",
+				"movepool": ["drainpunch", "closecombat", "rockslide", "irontail"]
+			}
+		]
+	},
+	"growlithe": {
+		"level": 6,
+		"sets": [
+			{
+				"role": "Mixed Attacker",
+				"movepool": ["flareblitz", "playrough", "crunch", "doubleedge"]
+			}
+		]
+	},
+	"growlithehisui": {
+		"level": 5,
+		"sets": [
+			{
+				"role": "Mixed Attacker",
+				"movepool": ["flareblitz", "rocktomb", "headsmash", "doubleedge"]
+			}
+		]
+	},
+	"poliwag": {
+		"level": 5,
+		"sets": [
+			{
+				"role": "Special Sweeper",
+				"movepool": ["amnesia", "scald", "icebeam", "psychic"]
+			}
+		]
+	},
+	"abra": {
+		"level": 5,
+		"sets": [
+			{
+				"role": "Special Attacker",
+				"movepool": ["thunderwave", "psychic", "dazzlinggleam", "firepunch"]
+			}
+		]
+	},
+	"machop": {
+		"level": 5,
+		"sets": [
+			{
+				"role": "Physical Attacker",
+				"movepool": ["drainpunch", "closecombat", "rockslide", "earthquake"]
+			}
+		]
+	},
+	"bellsprout": {
+		"level": 5,
+		"sets": [
+			{
+				"role": "Sleeper",
+				"movepool": ["sleeppowder", "sludgebomb", "gigadrain", "leafstorm"]
+			}
+		]
+	},
+	"tentacool": {
+		"level": 5,
+		"sets": [
+			{
+				"role": "Special Attacker",
+				"movepool": ["scald", "sludgebomb", "icebeam", "gigadrain"]
+			}
+		]
+	},
+	"toedscool": {
+		"level": 4,
+		"sets": [
+			{
+				"role": "Special Attacker",
+				"movepool": ["spore", "gigadrain", "earthpower", "earthquake"]
+			}
+		]
+	},
+	"geodude": {
+		"level": 5,
+		"sets": [
+			{
+				"role": "Physical Attacker",
+				"movepool": ["earthquake", "rockslide", "explosion", "bodyslam"]
+			}
+		]
+	},
+	"geodudealola": {
+		"level": 5,
+		"sets": [
+			{
+				"role": "Physical Attacker",
+				"movepool": ["earthquake", "rockslide", "explosion", "wildcharge"]
+			}
+		]
+	},
+	"ponyta": {
+		"level": 5,
+		"sets": [
+			{
+				"role": "Mixed Attacker",
+				"movepool": ["willowisp", "fireblast", "hypnosis", "doubleedge"]
+			}
+		]
+	},
+	"ponytagalar": {
+		"level": 5,
+		"sets": [
+			{
+				"role": "Special Attacker",
+				"movepool": ["thunderwave", "psychic", "hypnosis", "dazzlinggleam"]
+			}
+		]
+	},
+	"slowpoke": {
+		"level": 5,
+		"sets": [
+			{
+				"role": "Special Attacker",
+				"movepool": ["scald", "icebeam", "fireblast", "thunderbolt"]
+			}
+		]
+	},
+	"slowpokegalar": {
+		"level": 5,
+		"sets": [
+			{
+				"role": "Special Attacker",
+				"movepool": ["scald", "icebeam", "fireblast", "thunderbolt"]
+			}
+		]
+	},
+	"magnemite": {
+		"level": 5,
+		"sets": [
+			{
+				"role": "Mixed Attacker",
+				"movepool": ["thunderbolt", "flashcannon", "doubleedge", "thunderwave"]
+			}
+		]
+	},
+	"farfetchdgalar": {
+		"level": 5,
+		"sets": [
+			{
+				"role": "Physical Sweeper",
+				"movepool": ["swordsdance", "closecombat", "nightslash", "xscissor"]
+			}
+		]
+	},
+	"doduo": {
+		"level": 5,
+		"sets": [
+			{
+				"role": "Physical Sweeper",
+				"movepool": ["swordsdance", "drillpeck", "extremespeed", "jumpkick"]
+			}
+		]
+	},
+	"seel": {
+		"level": 6,
+		"sets": [
+			{
+				"role": "Special Attacker",
+				"movepool": ["scald", "bodyslam", "icebeam", "rest"]
+			}
+		]
+	},
+	"grimer": {
+		"level": 5,
+		"sets": [
+			{
+				"role": "Mixed Attacker",
+				"movepool": ["sludgebomb", "explosion", "gigadrain", "shadowsneak"]
+			}
+		]
+	},
+	"grimeralola": {
+		"level": 5,
+		"sets": [
+			{
+				"role": "Mixed Attacker",
+				"movepool": ["sludgebomb", "gigadrain", "shadowsneak", "darkpulse"]
+			}
+		]
+	},
+	"shellder": {
+		"level": 5,
+		"sets": [
+			{
+				"role": "Mixed Attacker",
+				"movepool": ["clamp", "icebeam", "explosion", "scald"]
+			}
+		]
+	},
+	"gastly": {
+		"level": 5,
+		"sets": [
+			{
+				"role": "Special Attacker",
+				"movepool": ["hypnosis", "psychic", "thunderbolt", "explosion"]
+			}
+		]
+	},
+	"onix": {
+		"level": 5,
+		"sets": [
+			{
+				"role": "Physical Attacker", 
+				"movepool": ["stoneedge", "earthquake", "rocktomb", "irontail"]
+			}
+		]
+	},
+	"drowzee": {
+		"level": 5,
+		"sets": [
+			{
+				"role": "Special Attacker", 
+				"movepool": ["thunderwave", "psychic", "hypnosis", "firepunch"]
+			}
+		]
+	},
+	"krabby": {
+		"level": 5,
+		"sets": [
+			{
+				"role": "Physical Sweeper",
+				"movepool": ["crabhammer", "swordsdance", "bodyslam", "xscissor"]
+			}
+		]
+	},
+	"voltorb": {
+		"level": 6,
+		"sets": [
+			{
+				"role": "Mixed Attacker",
+				"movepool": ["doubleedge", "explosion", "wildcharge", "thunderwave"]
+			}
+		]
+	},
+	"voltorbhisui": {
+		"level": 5,
+		"sets": [
+			{
+				"role": "Mixed Attacker",
+				"movepool": ["leafstorm", "explosion", "wildcharge", "thunderwave"]
+			}
+		]
+	},
+	"exeggcute": {
+		"level": 5,
+		"sets": [
+			{
+				"role": "Sleeper",
+				"movepool": ["sleeppowder", "gigadrain", "psychic", "explosion"]
+			}
+		]
+	},
+	"cubone": {
+		"level": 5,
+		"sets": [
+			{
+				"role": "Physical Attacker", 
+				"movepool": ["swordsdance", "earthquake", "rockslide", "drainpunch"]
+			}
+		]
+	},
+	"lickitung": {
+		"level": 4,
+		"sets": [
+			{
+				"role": "Physical Attacker", 
+				"movepool": ["swordsdance", "earthquake", "bodyslam", "scald"]
+			}
+		]
+	},
+	"koffing": {
+		"level": 5,
+		"sets": [
+			{
+				"role": "Mixed Attacker", 
+				"movepool": ["explosion", "willowisp", "sludgebomb", "thunderbolt"]
+			}
+		]
+	},
+	"rhyhorn": {
+		"level": 5,
+		"sets": [
+			{
+				"role": "Physical Attacker", 
+				"movepool": ["substitute", "earthquake", "rockslide", "bodyslam"]
+			}
+		]
+	},
+	"happiny": {
+		"level": 8,
+		"sets": [
+			{
+				"role": "Special Attacker", 
+				"movepool": ["softboiled", "sing", "icebeam", "seismictoss"]
+			}
+		]
+	},
+	"tangela": {
+		"level": 4,
+		"sets": [
+			{
+				"role": "Sleeper",
+				"movepool": ["sleeppowder", "energyball", "sludgebomb", "doubleedge"]
+			}
+		]
+	},
+	"horsea": {
+		"level": 6,
+		"sets": [
+			{
+				"role": "Special Attacker", 
+				"movepool": ["scald", "hydropump", "icebeam", "agility"]
+			}
+		]
+	},
+	"goldeen": {
+		"level": 6,
+		"sets": [
+			{
+				"role": "Special Attacker",
+				"movepool": ["scald", "aquajet", "icebeam", "agility"]
+			}
+		]
+	},
+	"staryu": {
+		"level": 5,
+		"sets": [
+			{
+				"role": "Special Attacker",
+				"movepool": ["scald", "thunderbolt", "psychic", "icebeam"]
+			}
+		]
+	},
+	"mimejr": {
+		"level": 7,
+		"sets": [
+			{
+				"role": "Special Attacker", 
+				"movepool": ["psychic", "firepunch", "dazzlinggleam", "thunderbolt"]
+			}
+		]
+	},
+	"mrmimegalar": {
+		"level": 4,
+		"sets": [
+			{
+				"role": "Special Attacker", 
+				"movepool": ["psychic", "icebeam", "drainpunch", "thunderbolt"]
+			}
+		]
+	},
+	"smoochum": {
+		"level": 6,
+		"sets": [
+			{
+				"role": "Sleeper", 
+				"movepool": ["lovelykiss", "psychic", "icebeam", "dazzlinggleam"]
+			}
+		]
+	},
+	"elekid": {
+		"level": 5,
+		"sets": [
+			{
+				"role": "Special Attacker", 
+				"movepool": ["thunderbolt", "thunderwave", "firepunch", "quickattack"]
+			}
+		]
+	},
+	"magby": {
+		"level": 5,
+		"sets": [
+			{
+				"role": "Special Attacker",
+				"movepool": ["willowisp", "thunderpunch", "fireblast", "machpunch"]
+			}
+		]
+	},
+	"magikarp": {
+		"level": 9,
+		"sets": [
+			{
+				"role": "Mixed Attacker",
+				"movepool": ["hydropump", "tackle", "splash"]
+			}
+		]
+	},
+	"eevee": {
+		"level": 7,
+		"sets": [
+			{
+				"role": "Physical Attacker",
+				"movepool": ["doubleedge", "shadowball", "doublekick", "quickattack"]
+			}
+		]
+	},
+	"porygon": {
+		"level": 4,
+		"sets": [
+			{
+				"role": "Mixed Attacker",
+				"movepool": ["triattack", "agility", "thunderbolt", "icebeam"]
+			}
+		]
+	},
+	"omanyte": {
+		"level": 5,
+		"sets": [
+			{
+				"role": "Special Attacker",
+				"movepool": ["scald", "icebeam", "rocktomb", "bodyslam"]
+			}
+		]
+	},
+	"kabuto": {
+		"level": 6,
+		"sets": [
+			{
+				"role": "Physical Sweeper",
+				"movepool": ["swordsdance", "earthquake", "rocktomb", "scald"]
+			}
+		]
+	},
+	"dratini": {
+		"level": 5,
+		"sets": [
+			{
+				"role": "Mixed Attacker",
+				"movepool": ["scald", "dragonbreath", "bodyslam", "fireblast"]
+			}
+		]
+	},
+	"meltan": {
+		"level": 6,
+		"sets": [
+			{
+				"role": "Mixed Attacker", 
+				"movepool": ["bodyslam", "thunderwave", "flashcannon", "thunderbolt"]
+			}
+		]
+	}
+}

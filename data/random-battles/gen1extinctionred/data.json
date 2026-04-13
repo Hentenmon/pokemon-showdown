@@ -39,7 +39,7 @@
 		]
 	},
 	"charizardmegax": {
-        "level": 68,
+        "level": 73,
         "sets": [
 			{
 				"role": "Physical Attacker",
@@ -521,7 +521,7 @@
         ]
     },
     "alakazammega": {
-        "level": 63,
+        "level": 58,
         "sets": [
             {
                 "role": "Special Attacker",

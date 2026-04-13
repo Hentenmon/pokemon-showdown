@@ -161,7 +161,7 @@ export class RandomGen1Teams extends RandomGen2Teams {
 
 		const typeCount: { [k: string]: number } = {};
 		const weaknessCount: { [k: string]: number } =
-			{ Electric: 0, Psychic: 0, Water: 0, Ice: 0, Ground: 0, Fire: 0 };
+			{ Electric: 0, Psychic: 0, Water: 0, Ice: 0, Ground: 0, Fire: 0, Dark: 0, Fairy: 0 };
 
 		let numMaxLevelPokemon = 0;
 		let hasMegaOrRestricted = false;
