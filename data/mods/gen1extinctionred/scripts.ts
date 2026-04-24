@@ -31,7 +31,7 @@ export const Scripts: ModdedBattleScriptsData = {
 
 		return errors;
 	},
-
+	
 onValidateTeam(team) {
 	let megaCount = 0;
 

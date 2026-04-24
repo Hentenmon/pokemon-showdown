@@ -38,7 +38,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 	},
 	{
 		name: "[Gen 1] Extinction Red Baby Random Battle",
-		mod: 'gen1extinctionredbaby',
+		mod: 'gen1extinctionred',
 		team: 'randomBaby',
 		bestOfDefault: true,
 		ruleset: ['Standard'],

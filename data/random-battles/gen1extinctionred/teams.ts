@@ -1,271 +1,161 @@
 import RandomGen2Teams from '../gen2/teams';
-import { Utils } from '../../../lib';
 
-interface HackmonsCupEntry {
-	types: string[];
-	baseStats: StatsTable;
+function toID(text: any): string {
+	return ('' + text).toLowerCase().replace(/[^a-z0-9]+/g, '') as string;
 }
 
-interface Gen1RandomBattleSet {
-	role?: string;
-	movepool: ID[];
-}
+const randomData: {[species: string]: any} = require('./data.json');
+const babyData: {[species: string]: any} = require('./baby-data.json');
 
-interface Gen1RandomBattleSpecies {
-	level?: number;
-	sets: Gen1RandomBattleSet[];
-}
-
-const randomData: { [species: IDEntry]: Gen1RandomBattleSpecies } =
-	require('./data.json');
-
-const MEGA_SPECIES = new Set<ID>([
-	'venusaurmega',
-	'charizardmegax',
-	'charizardmegay',
-	'blastoisemega',
-	'beedrillmega',
-	'pidgeotmega',
-	'clefablemega',
-	'alakazammega',
-	'victreebelmega',
-	'gengarmega',
-	'steelixmega',
-	'kangaskhanmega',
-	'starmiemega',
-	'scizormega',
-	'pinsirmega',
-	'gyaradosmega',
-	'aerodactylmega',
-	'dragonitemega',
-	'mewtwomegax',
-	'mewtwomegay',
+const MEGA_SPECIES = new Set([
+	'venusaurmega','charizardmegax','charizardmegay','blastoisemega',
+	'beedrillmega','pidgeotmega','clefablemega','alakazammega',
+	'victreebelmega','gengarmega','steelixmega','kangaskhanmega',
+	'starmiemega','scizormega','pinsirmega','gyaradosmega',
+	'aerodactylmega','dragonitemega','mewtwomegax','mewtwomegay',
 ]);
 
-const RESTRICTED_SPECIES = new Set<ID>([
-	'blissey',
-]);
+export class RandomGen1ExtinctionRedTeams extends RandomGen2Teams {
 
-export class RandomGen1Teams extends RandomGen2Teams {
-
-	override randomData = randomData;
-
-	// -----------------------
-	// Challenge Cup Teams
-	// -----------------------
-	override randomCCTeam() {
-		this.enforceNoDirectCustomBanlistChanges();
-
-		const team = [];
-		const randomN = this.randomNPokemon(this.maxTeamSize, this.forceMonotype);
-
-		for (const pokemon of randomN) {
-			const species = this.dex.species.get(pokemon);
-
-			let mbstmin = 1600;
-			if (MEGA_SPECIES.has(species.id)) {
-				mbstmin = 2000;
-			} else if (RESTRICTED_SPECIES.has(species.id)) {
-				mbstmin = 1900;
-			}
-
-			const stats = species.baseStats;
-
-			let mbst =
-				(stats.hp * 2 + 30 + 63 + 100) + 10 +
-				(stats.atk * 2 + 30 + 63 + 100) + 5 +
-				(stats.def * 2 + 30 + 63 + 100) + 5 +
-				(stats.spa * 2 + 30 + 63 + 100) + 5 +
-				(stats.spd * 2 + 30 + 63 + 100) + 5 +
-				(stats.spe * 2 + 30 + 63 + 100) + 5;
-
-			let level;
-			if (this.adjustLevel) {
-				level = this.adjustLevel;
-			} else {
-				level = Math.floor(100 * mbstmin / mbst);
-
-				while (level < 100) {
-					mbst =
-						Math.floor((stats.hp * 2 + 30 + 63 + 100) * level / 100 + 10) +
-						Math.floor((stats.atk * 2 + 30 + 63 + 100) * level / 100 + 5) +
-						Math.floor((stats.def * 2 + 30 + 63 + 100) * level / 100 + 5) +
-						Math.floor((stats.spa * 2 + 30 + 63 + 100) * level / 100 + 5) +
-						Math.floor((stats.spd * 2 + 30 + 63 + 100) * level / 100 + 5) +
-						Math.floor((stats.spe * 2 + 30 + 63 + 100) * level / 100 + 5);
-
-					if (mbst >= mbstmin) break;
-					level++;
-				}
-			}
-
-			const ivs = {
-				hp: 0,
-				atk: this.random(16),
-				def: this.random(16),
-				spa: this.random(16),
-				spd: 0,
-				spe: this.random(16),
-			};
-
-			ivs.hp =
-				(ivs.atk % 2) * 16 +
-				(ivs.def % 2) * 8 +
-				(ivs.spe % 2) * 4 +
-				(ivs.spa % 2) * 2;
-
-			ivs.atk *= 2;
-			ivs.def *= 2;
-			ivs.spa *= 2;
-			ivs.spd = ivs.spa;
-			ivs.spe *= 2;
-
-			const evs = { hp: 255, atk: 255, def: 255, spa: 255, spd: 255, spe: 255 };
-
-			const pool = [...this.dex.species.getMovePool(species.id)];
-			const moves = this.multipleSamplesNoReplace(pool, 4);
-
-			team.push({
-				name: species.baseSpecies,
-				species: species.name,
-				moves,
-				gender: false,
-				ability: 'No Ability',
-				evs,
-				ivs,
-				item: '',
-				level,
-				happiness: 0,
-				shiny: false,
-				nature: 'Serious',
-			});
-		}
-
-		return team;
+	// 🔥 REGULAR RANDOMS (WITH MEGAS)
+	randomTeam() {
+		return this.generateTeam(normalizedData, true, false);
 	}
 
-	// -----------------------
-	// MAIN RANDOM TEAM
-	// -----------------------
-	override randomTeam() {
+	// 👶 BABY RANDOMS (NO MEGAS)
+	randomBabyTeam() {
+		return this.generateTeam(normalizedData, false, true);
+	}
+
+	generateTeam(
+		data: {[species: string]: any},
+		allowMegas: boolean,
+		ignoreWeaknesses: boolean
+	) {
 		this.enforceNoDirectCustomBanlistChanges();
 
-		const seed = this.prng.getSeed();
 		const pokemon: RandomTeamsTypes.RandomSet[] = [];
 
 		const isMonotype = !!this.forceMonotype;
 		const typePool = this.dex.types.names();
 		const type = this.forceMonotype || this.sample(typePool);
 
-		const rejectedButNotInvalidPool: string[] = [];
+		const typeCount: {[k: string]: number} = {};
+		const weaknessCount: {[k: string]: number} = {
+			Electric: 0, Psychic: 0, Water: 0, Ice: 0,
+			Ground: 0, Fire: 0, Dark: 0, Fairy: 0,
+		};
 
-		const typeCount: { [k: string]: number } = {};
-		const weaknessCount: { [k: string]: number } =
-			{ Electric: 0, Psychic: 0, Water: 0, Ice: 0, Ground: 0, Fire: 0, Dark: 0, Fairy: 0 };
+		const normalizedData: {[id: string]: any} = {};
 
-		let numMaxLevelPokemon = 0;
-		let hasMegaOrRestricted = false;
+		for (const key in data) {
+			const id = toID(key);
+			normalizedData[id] = data[key];
+		}
 
-		const pokemonPool = Object.keys(
-			this.getPokemonPool(type, pokemon, isMonotype, Object.keys(randomData))[0]
+		const basePool = Object.keys(
+			this.getPokemonPool(type, pokemon, isMonotype, Object.keys(data))[0]
 		);
 
+		// 🔥 HARD FILTER: only allow species that exist in your dataset
+		const pokemonPool = basePool.filter(s => data[this.dex.species.get(s).id]);
+
 		while (pokemonPool.length && pokemon.length < this.maxTeamSize) {
-			const species = this.dex.species.get(this.sampleNoReplace(pokemonPool));
+			const speciesId = this.sample(pokemonPool);
+			const species = this.dex.species.get(speciesId);
 			if (!species.exists) continue;
 
-			if (species.id === 'ditto' && this.battleHasDitto) continue;
-
-			const limitFactor = Math.round(this.maxTeamSize / 6) || 1;
-
+			const entry = data[species.id];
+			if (!entry || !entry.sets?.length) {
+				pokemonPool.splice(pokemonPool.indexOf(speciesId), 1);
+				continue;
+			}
+		
 			const isMega = MEGA_SPECIES.has(species.id);
-			const isRestricted = RESTRICTED_SPECIES.has(species.id);
-
-			if ((isMega || isRestricted) && hasMegaOrRestricted) continue;
-
+		
+			if (!allowMegas && isMega) {
+				pokemonPool.splice(pokemonPool.indexOf(speciesId), 1);
+				continue;
+			}
+			if (allowMegas && isMega && hasMega) continue;
+		
 			let skip = false;
-
-			for (const t of species.types) {
-				if (typeCount[t] >= 2 * limitFactor) skip = true;
+		
+			if (!ignoreWeaknesses) {
+				for (const t of species.types) {
+					if (typeCount[t] >= 2) skip = true;
+				}
 			}
-			if (skip) continue;
-
-			const pokemonWeaknesses: string[] = [];
-			for (const w in weaknessCount) {
-				if (this.dex.getEffectiveness(w, species) <= 0) continue;
-				if (weaknessCount[w] >= 2 * limitFactor) skip = true;
-				pokemonWeaknesses.push(w);
+		
+			if (skip) {
+				pokemonPool.splice(pokemonPool.indexOf(speciesId), 1);
+				continue;
 			}
-			if (skip) continue;
-
-			if (!this.adjustLevel && this.getLevel(species) === 100 &&
-				numMaxLevelPokemon >= limitFactor) continue;
-
-			pokemon.push(this.randomSet(species));
-
+		
+			// ✅ ACCEPT MON
+			pokemon.push(this.randomSet(species, data));
+			pokemonPool.splice(pokemonPool.indexOf(speciesId), 1);
+		
 			for (const t of species.types) {
 				typeCount[t] = (typeCount[t] || 0) + 1;
 			}
-			for (const w of pokemonWeaknesses) {
-				weaknessCount[w]++;
+		
+			if (isMega) hasMega = true;
+		}
+
+		// 🔥 Force 1 Mega ONLY in normal mode
+		if (allowMegas && !pokemon.some(p =>
+			MEGA_SPECIES.has(this.dex.species.get(p.species).id)
+		)) {
+			const megaPool = Object.keys(data).filter(s => MEGA_SPECIES.has(s));
+			if (megaPool.length) {
+				const mega = this.dex.species.get(this.sample(megaPool));
+				pokemon[pokemon.length - 1] = this.randomSet(mega, data);
 			}
-
-			if (this.getLevel(species) === 100) numMaxLevelPokemon++;
-
-			if (species.id === 'ditto') this.battleHasDitto = true;
-
-			if (isMega || isRestricted) hasMegaOrRestricted = true;
 		}
 
-		// Ensure at least one Mega
-		if (!pokemon.some(p => MEGA_SPECIES.has(this.dex.species.get(p.species).id))) {
-			const megaPool = Object.keys(randomData).filter(s => MEGA_SPECIES.has(s as ID));
-			const megaSpecies = this.dex.species.get(this.sample(megaPool));
+		if (!pokemon.length) {
+			console.error('⚠️ EMPTY TEAM, FALLBACK TRIGGERED');
 
-		// Replace last mon with a Mega
-		pokemon[pokemon.length - 1] = this.randomSet(megaSpecies);
+			const fallbackPool = Object.keys(data);
+			if (fallbackPool.length) {
+				const species = this.dex.species.get(this.sample(fallbackPool));
+				pokemon.push(this.randomSet(species, data));
+			}
 		}
-
 		return pokemon;
 	}
 
-	// -----------------------
-	// SET GENERATION
-	// -----------------------
-	override randomSet(species: string | Species): RandomTeamsTypes.RandomSet {
-		const ruleTable = this.dex.formats.getRuleTable(this.format);
-
+	randomSet(
+		species: string | Species,
+		data: {[species: string]: any}
+	): RandomTeamsTypes.RandomSet {
 		species = this.dex.species.get(species);
-		const data = randomData[species.id];
+		const entry = data[species.id];
+		if (!entry) {
+			// skip invalid species cleanly
+			throw new Error(`Missing random data for species: ${species.id}`);
+		}
 
-		const chosenSet = this.sample(data.sets);
-		const pool = [...chosenSet.movepool];
-
-		const moves = this.multipleSamplesNoReplace(pool, Math.min(4, pool.length));
-
-		const level = this.getLevel(species);
-
-		const evs = { hp: 255, atk: 255, def: 255, spa: 255, spd: 255, spe: 255 };
-		const ivs = { hp: 30, atk: 30, def: 30, spa: 30, spd: 30, spe: 30 };
-
-		const isMega = MEGA_SPECIES.has(species.id);
-
-// Force correct display + no reversion
-		const setSpecies = isMega ? species.name : species.baseSpecies;
+		const chosenSet = this.sample(entry.sets);
+		const moves = this.multipleSamplesNoReplace(
+			[...chosenSet.movepool],
+			Math.min(4, chosenSet.movepool.length)
+		);
 
 		return {
-			name: species.baseSpecies, // nickname shown
-			species: species.name,     // actual form used in battle
-			moves: [...moves],
+			name: species.baseSpecies,
+			species: species.name,
+			moves,
 			ability: 'No Ability',
-			evs,
-			ivs,
+			evs: {hp:255, atk:255, def:255, spa:255, spd:255, spe:255},
+			ivs: {hp:30, atk:30, def:30, spa:30, spd:30, spe:30},
 			item: '',
-			level,
+			level: entry.level,
 			shiny: false,
 			gender: false,
 		};
 	}
 }
 
-export default RandomGen1Teams;
+export default RandomGen1ExtinctionRedTeams;

@@ -18,7 +18,7 @@
 		]
 	},
 	"squirtle": {
-		"level": 6,
+		"level": 5,
 		"sets": [
 			{
 				"role": "Special Attacker",
@@ -27,7 +27,7 @@
 		]
 	},
 	"caterpie": {
-		"level": 9,
+		"level": 7,
 		"sets": [
 			{
 				"role": "Physical Attacker",
@@ -36,7 +36,7 @@
 		]
 	},
 	"weedle": {
-		"level": 9,
+		"level": 7,
 		"sets": [
 			{
 				"role": "Physical Attacker",
@@ -45,7 +45,7 @@
 		]
 	},
 	"pidgey": {
-		"level": 7,
+		"level": 5,
 		"sets": [
 			{
 				"role": "Physical Attacker",
@@ -54,7 +54,7 @@
 		]
 	},
 	"rattata": {
-		"level": 6,
+		"level": 5,
 		"sets": [
 			{
 				"role": "Mixed Attacker",
@@ -72,7 +72,7 @@
 		]
 	},
 	"spearow": {
-		"level": 6,
+		"level": 5,
 		"sets": [
 			{
 				"role": "Physical Attacker",
@@ -90,7 +90,7 @@
 		]
 	},
 	"pichu": {
-		"level": 7,
+		"level": 5,
 		"sets": [
 			{
 				"role": "Special Attacker",
@@ -108,7 +108,7 @@
 		]
 	},
 	"sandshrewalola": {
-		"level": 6,
+		"level": 5,
 		"sets": [
 			{
 				"role": "Physical Sweeper",
@@ -126,7 +126,7 @@
 		]
 	},
 	"nidoranf": {
-		"level": 6,
+		"level": 5,
 		"sets": [
 			{
 				"role": "Mixed Attacker",
@@ -135,7 +135,7 @@
 		]
 	},
 	"cleffa": {
-		"level": 7,
+		"level": 5,
 		"sets": [
 			{
 				"role": "Sleeper",
@@ -144,7 +144,7 @@
 		]
 	},
 	"vulpix": {
-		"level": 6,
+		"level": 5,
 		"sets": [
 			{
 				"role": "Sleeper",
@@ -162,7 +162,7 @@
 		]
 	},
 	"igglybuff": {
-		"level": 8,
+		"level": 5,
 		"sets": [
 			{
 				"role": "Sleeper",
@@ -171,7 +171,7 @@
 		]
 	},
 	"zubat": {
-		"level": 7,
+		"level": 5,
 		"sets": [
 			{
 				"role": "Sleeper",
@@ -180,7 +180,7 @@
 		]
 	},
 	"oddish": {
-		"level": 6,
+		"level": 5,
 		"sets": [
 			{
 				"role": "Special Attacker",
@@ -189,7 +189,7 @@
 		]
 	},
 	"paras": {
-		"level": 6,
+		"level": 5,
 		"sets": [
 			{
 				"role": "Sleeper",
@@ -198,7 +198,7 @@
 		]
 	},
 	"venonat": {
-		"level": 6,
+		"level": 5,
 		"sets": [
 			{
 				"role": "Sleeper",
@@ -261,7 +261,7 @@
 		]
 	},
 	"psyduck": {
-		"level": 6,
+		"level": 5,
 		"sets": [
 			{
 				"role": "Mixed Attacker",
@@ -279,7 +279,7 @@
 		]
 	},
 	"growlithe": {
-		"level": 6,
+		"level": 5,
 		"sets": [
 			{
 				"role": "Mixed Attacker",
@@ -432,7 +432,7 @@
 		]
 	},
 	"seel": {
-		"level": 6,
+		"level": 5,
 		"sets": [
 			{
 				"role": "Special Attacker",
@@ -504,7 +504,7 @@
 		]
 	},
 	"voltorb": {
-		"level": 6,
+		"level": 5,
 		"sets": [
 			{
 				"role": "Mixed Attacker",
@@ -567,7 +567,7 @@
 		]
 	},
 	"happiny": {
-		"level": 8,
+		"level": 6,
 		"sets": [
 			{
 				"role": "Special Attacker", 
@@ -585,7 +585,7 @@
 		]
 	},
 	"horsea": {
-		"level": 6,
+		"level": 5,
 		"sets": [
 			{
 				"role": "Special Attacker", 
@@ -612,7 +612,7 @@
 		]
 	},
 	"mimejr": {
-		"level": 7,
+		"level": 5,
 		"sets": [
 			{
 				"role": "Special Attacker", 
@@ -630,7 +630,7 @@
 		]
 	},
 	"smoochum": {
-		"level": 6,
+		"level": 5,
 		"sets": [
 			{
 				"role": "Sleeper", 
@@ -657,7 +657,7 @@
 		]
 	},
 	"magikarp": {
-		"level": 9,
+		"level": 7,
 		"sets": [
 			{
 				"role": "Mixed Attacker",
@@ -666,7 +666,7 @@
 		]
 	},
 	"eevee": {
-		"level": 7,
+		"level": 5,
 		"sets": [
 			{
 				"role": "Physical Attacker",
@@ -693,7 +693,7 @@
 		]
 	},
 	"kabuto": {
-		"level": 6,
+		"level": 5,
 		"sets": [
 			{
 				"role": "Physical Sweeper",
@@ -711,7 +711,7 @@
 		]
 	},
 	"meltan": {
-		"level": 6,
+		"level": 5,
 		"sets": [
 			{
 				"role": "Mixed Attacker", 
