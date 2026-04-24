@@ -135,7 +135,7 @@
 		]
 	},
 	"cleffa": {
-		"level": 5,
+		"level": 6,
 		"sets": [
 			{
 				"role": "Sleeper",
@@ -162,7 +162,7 @@
 		]
 	},
 	"igglybuff": {
-		"level": 5,
+		"level": 6,
 		"sets": [
 			{
 				"role": "Sleeper",
@@ -338,15 +338,6 @@
 			{
 				"role": "Special Attacker",
 				"movepool": ["scald", "sludgebomb", "icebeam", "gigadrain"]
-			}
-		]
-	},
-	"toedscool": {
-		"level": 4,
-		"sets": [
-			{
-				"role": "Special Attacker",
-				"movepool": ["spore", "gigadrain", "earthpower", "earthquake"]
 			}
 		]
 	},
@@ -540,7 +531,7 @@
 		]
 	},
 	"lickitung": {
-		"level": 4,
+		"level": 5,
 		"sets": [
 			{
 				"role": "Physical Attacker", 
@@ -576,7 +567,7 @@
 		]
 	},
 	"tangela": {
-		"level": 4,
+		"level": 5,
 		"sets": [
 			{
 				"role": "Sleeper",
@@ -608,24 +599,6 @@
 			{
 				"role": "Special Attacker",
 				"movepool": ["scald", "thunderbolt", "psychic", "icebeam"]
-			}
-		]
-	},
-	"mimejr": {
-		"level": 5,
-		"sets": [
-			{
-				"role": "Special Attacker", 
-				"movepool": ["psychic", "firepunch", "dazzlinggleam", "thunderbolt"]
-			}
-		]
-	},
-	"mrmimegalar": {
-		"level": 4,
-		"sets": [
-			{
-				"role": "Special Attacker", 
-				"movepool": ["psychic", "icebeam", "drainpunch", "thunderbolt"]
 			}
 		]
 	},
@@ -675,7 +648,7 @@
 		]
 	},
 	"porygon": {
-		"level": 4,
+		"level": 5,
 		"sets": [
 			{
 				"role": "Mixed Attacker",

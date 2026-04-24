@@ -4,8 +4,19 @@ function toID(text: any): string {
 	return ('' + text).toLowerCase().replace(/[^a-z0-9]+/g, '') as string;
 }
 
-const randomData: {[species: string]: any} = require('./data.json');
-const babyData: {[species: string]: any} = require('./baby-data.json');
+const rawRandomData: {[species: string]: any} = require('./data.json');
+const rawBabyData: {[species: string]: any} = require('./baby-data.json');
+
+// 🔥 Normalize BOTH datasets ONCE (global, not inside functions)
+const randomData: {[id: string]: any} = {};
+for (const key in rawRandomData) {
+	randomData[toID(key)] = rawRandomData[key];
+}
+
+const babyData: {[id: string]: any} = {};
+for (const key in rawBabyData) {
+	babyData[toID(key)] = rawBabyData[key];
+}
 
 const MEGA_SPECIES = new Set([
 	'venusaurmega','charizardmegax','charizardmegay','blastoisemega',
@@ -17,14 +28,14 @@ const MEGA_SPECIES = new Set([
 
 export class RandomGen1ExtinctionRedTeams extends RandomGen2Teams {
 
-	// 🔥 REGULAR RANDOMS (WITH MEGAS)
+	// 🔥 REGULAR RANDOMS
 	randomTeam() {
-		return this.generateTeam(normalizedData, true, false);
+		return this.generateTeam(randomData, true, false);
 	}
 
-	// 👶 BABY RANDOMS (NO MEGAS)
+	// 👶 BABY RANDOMS
 	randomBabyTeam() {
-		return this.generateTeam(normalizedData, false, true);
+		return this.generateTeam(babyData, false, true);
 	}
 
 	generateTeam(
@@ -41,88 +52,89 @@ export class RandomGen1ExtinctionRedTeams extends RandomGen2Teams {
 		const type = this.forceMonotype || this.sample(typePool);
 
 		const typeCount: {[k: string]: number} = {};
-		const weaknessCount: {[k: string]: number} = {
-			Electric: 0, Psychic: 0, Water: 0, Ice: 0,
-			Ground: 0, Fire: 0, Dark: 0, Fairy: 0,
-		};
 
-		const normalizedData: {[id: string]: any} = {};
-
-		for (const key in data) {
-			const id = toID(key);
-			normalizedData[id] = data[key];
-		}
+		let hasMega = false;
 
 		const basePool = Object.keys(
 			this.getPokemonPool(type, pokemon, isMonotype, Object.keys(data))[0]
 		);
 
-		// 🔥 HARD FILTER: only allow species that exist in your dataset
+		// Only keep mons that exist in your dataset
 		const pokemonPool = basePool.filter(s => data[this.dex.species.get(s).id]);
 
 		while (pokemonPool.length && pokemon.length < this.maxTeamSize) {
 			const speciesId = this.sample(pokemonPool);
 			const species = this.dex.species.get(speciesId);
-			if (!species.exists) continue;
+			if (!species.exists) {
+				pokemonPool.splice(pokemonPool.indexOf(speciesId), 1);
+				continue;
+			}
 
 			const entry = data[species.id];
 			if (!entry || !entry.sets?.length) {
 				pokemonPool.splice(pokemonPool.indexOf(speciesId), 1);
 				continue;
 			}
-		
+
 			const isMega = MEGA_SPECIES.has(species.id);
-		
+
+			// 🚫 Baby = no megas
 			if (!allowMegas && isMega) {
 				pokemonPool.splice(pokemonPool.indexOf(speciesId), 1);
 				continue;
 			}
-			if (allowMegas && isMega && hasMega) continue;
-		
+
+			// 🚫 Only 1 mega in normal
+			if (allowMegas && isMega && hasMega) {
+				pokemonPool.splice(pokemonPool.indexOf(speciesId), 1);
+				continue;
+			}
+
 			let skip = false;
-		
+
+			// Type balancing (kept for normal, optional for baby)
 			if (!ignoreWeaknesses) {
 				for (const t of species.types) {
 					if (typeCount[t] >= 2) skip = true;
 				}
 			}
-		
+
 			if (skip) {
 				pokemonPool.splice(pokemonPool.indexOf(speciesId), 1);
 				continue;
 			}
-		
-			// ✅ ACCEPT MON
+
+			// ✅ ACCEPT
 			pokemon.push(this.randomSet(species, data));
 			pokemonPool.splice(pokemonPool.indexOf(speciesId), 1);
-		
+
 			for (const t of species.types) {
 				typeCount[t] = (typeCount[t] || 0) + 1;
 			}
-		
+
 			if (isMega) hasMega = true;
 		}
 
-		// 🔥 Force 1 Mega ONLY in normal mode
+		// 🔥 Force 1 mega in normal mode
 		if (allowMegas && !pokemon.some(p =>
 			MEGA_SPECIES.has(this.dex.species.get(p.species).id)
 		)) {
 			const megaPool = Object.keys(data).filter(s => MEGA_SPECIES.has(s));
-			if (megaPool.length) {
+			if (megaPool.length && pokemon.length) {
 				const mega = this.dex.species.get(this.sample(megaPool));
 				pokemon[pokemon.length - 1] = this.randomSet(mega, data);
 			}
 		}
 
+		// 🧯 Emergency fallback (prevents empty team crash forever)
 		if (!pokemon.length) {
-			console.error('⚠️ EMPTY TEAM, FALLBACK TRIGGERED');
-
 			const fallbackPool = Object.keys(data);
 			if (fallbackPool.length) {
 				const species = this.dex.species.get(this.sample(fallbackPool));
 				pokemon.push(this.randomSet(species, data));
 			}
 		}
+
 		return pokemon;
 	}
 
@@ -132,8 +144,8 @@ export class RandomGen1ExtinctionRedTeams extends RandomGen2Teams {
 	): RandomTeamsTypes.RandomSet {
 		species = this.dex.species.get(species);
 		const entry = data[species.id];
-		if (!entry) {
-			// skip invalid species cleanly
+
+		if (!entry || !entry.sets?.length) {
 			throw new Error(`Missing random data for species: ${species.id}`);
 		}
 
