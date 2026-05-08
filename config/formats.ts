@@ -28,6 +28,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
     	mod: 'gen1extinctionred',
     	ruleset: ['Standard', 'Mega Clause'],
 		banlist: ["Uber", "AG"],
+		teambuilderFormat: 'gen1extinctionred',
 	},
 	{
 		name: "[Gen 1] Extinction Red Random Battle",
