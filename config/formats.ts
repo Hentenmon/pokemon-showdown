@@ -31,6 +31,12 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		teambuilderFormat: 'gen1extinctionred',
 	},
 	{
+		name: "[Gen 1] Extinction Red AG",
+    	mod: 'gen1extinctionred',
+    	ruleset: ['Standard AG'],
+		teambuilderFormat: 'gen1extinctionred',
+	},
+	{
 		name: "[Gen 1] Extinction Red Random Battle",
 		mod: 'gen1extinctionred',
 		team: 'random',
