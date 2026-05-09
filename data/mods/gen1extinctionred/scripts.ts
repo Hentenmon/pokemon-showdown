@@ -28,36 +28,6 @@ export const Scripts: ModdedBattleScriptsData = {
 				}
 			}
 		}
-	
-	init() {
-		this.modData('TypeChart', 'Fairy', {
-			damageTaken: {},
-		});
-	},
-
-	actions: {
-		getCategory(move) {
-			if (move.category !== 'Status') {
-				const specialTypes = [
-					'Fire',
-					'Water',
-					'Grass',
-					'Electric',
-					'Ice',
-					'Psychic',
-					'Dragon',
-					'Dark',
-					'Fairy',
-				];
-
-				return specialTypes.includes(move.type)
-					? 'Special'
-					: 'Physical';
-			}
-
-			return 'Status';
-		},
-	},
 		return errors;
 	},
 	
