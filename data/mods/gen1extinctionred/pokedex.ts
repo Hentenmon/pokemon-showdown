@@ -619,6 +619,16 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		types: ['Water', 'Poison'],
 		baseStats: { hp: 80, atk: 70, def: 65, spa: 120, spd: 120, spe: 100 },
 	},
+	toedscool: {
+		inherit: true,
+		types: ['Grass', 'Ground'],
+		baseStats: { hp: 40, atk: 40, def: 35, spa: 100, spd: 100, spe: 70 },
+	},
+	toedscruel: {
+		inherit: true,
+		types: ['Grass', 'Ground'],
+		baseStats: { hp: 80, atk: 70, def: 65, spa: 120, spd: 120, spe: 100 },
+	},
 	geodude: {
 		inherit: true,
 		types: ['Rock', 'Ground'],
