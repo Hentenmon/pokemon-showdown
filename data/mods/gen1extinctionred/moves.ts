@@ -19872,6 +19872,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		target: "normal",
 		type: "Fighting",
 		contestType: "Tough",
+		gen: 1,
 	},
 	supersonic: {
 		num: 48,
