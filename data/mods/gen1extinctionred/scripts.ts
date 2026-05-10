@@ -1,5 +1,5 @@
 export const Scripts: ModdedBattleScriptsData = {
-	inherit: 'gen1',
+	inherit: 'gen9',
 	gen: 1,
 
 	// ============================
@@ -102,7 +102,7 @@ export const Scripts: ModdedBattleScriptsData = {
 
 			// CRITICAL FIX:
 			// EVERYTHING belongs to Extinction Red
-			species.gen = 1.33;
+			species.gen = 1;
 
 			// Default tier fallback
 			if (!species.tier) species.tier = 'OU';
@@ -113,7 +113,7 @@ export const Scripts: ModdedBattleScriptsData = {
 			if (
 				species.isMega ||
 				species.forme?.includes('Mega') ||
-				species.name.includes('Mega')
+				species.name?.includes('Mega')
 			) {
 				// Keep Mega identity
 				species.isMega = true;
@@ -155,7 +155,7 @@ export const Scripts: ModdedBattleScriptsData = {
 			move.isNonstandard = null;
 
 			// Make all modern moves legal in ER
-			move.gen = 1.33;
+			move.gen = 1;
 		}
 
 		// ============================
@@ -165,7 +165,7 @@ export const Scripts: ModdedBattleScriptsData = {
 			const item = this.modData('Items', id);
 
 			item.isNonstandard = null;
-			item.gen = 1.33;
+			item.gen = 1;
 		}
 	},
 };

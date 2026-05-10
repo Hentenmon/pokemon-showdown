@@ -85,7 +85,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 	},
 	blastoisemega: {
 		name: "Blastoise-Mega",
-		basespecies: "Blastoise",
+		baseSpecies: "Blastoise",
 		isNonstandard: null,
 		types: ['Water'],
 		baseStats: { hp: 79, atk: 103, def: 120, spa: 135, spd: 135, spe: 78 },
@@ -130,7 +130,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 	},
 	beedrillmega: {
 		name: "Beedrill-Mega",
-		basespecies: "Beedrill",
+		baseSpecies: "Beedrill",
 		isNonstandard: null,
 		types: ['Bug', 'Poison'],
 		baseStats: { hp: 65, atk: 150, def: 40, spa: 15, spd: 15, spe: 145 },
