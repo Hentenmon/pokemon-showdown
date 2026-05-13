@@ -7,10 +7,10 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 	},
 	venusaur: {
 		tier: "OU",
-		gen: 1,
 	},
 	venusaurmega: {
 		tier: "OU",
+		gen: 1,
 	},
 	charmander: {
 		tier: "LC",
@@ -349,6 +349,14 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 	},
 	tentacruel: {
 		tier: "OU",
+	},
+	toedscool: {
+		tier: "LC",
+		gen: 1,
+	},
+	toedscruel: {
+		tier: "OU",
+		gen: 1,
 	},
 	geodude: {
 		tier: "LC",
@@ -857,3 +865,4 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "Illegal",
 	},
 };
+

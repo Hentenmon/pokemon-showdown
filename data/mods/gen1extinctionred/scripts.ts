@@ -1,138 +1,169 @@
 export const Scripts: ModdedBattleScriptsData = {
-	inherit: 'gen1',
+	inherit: 'gen9',
 	gen: 1,
 
+	// ============================
+	// TEAM VALIDATION
+	// ============================
 	onValidateSet(set, format) {
 		const species = this.dex.species.get(set.species);
 		const errors: string[] = [];
 
-		// Ban non-mod Pokémon
-		if (
-			species.gen > 1 &&
-			!this.dex.mods.gen1extinctionred.Pokedex[species.id]
-		) {
-			errors.push(`${species.name} is not available in Extinction Red.`);
+		const isExtRed = format.id === 'gen1extinctionred';
+
+		// ============================
+		// SPECIES LEGALITY
+		// ============================
+		if (!isExtRed) {
+			if (species.gen > 1 && !species.isNonstandard) {
+				errors.push(`${species.name} is not available in this format.`);
+			}
 		}
 
-		// Move legality
+		// ============================
+		// MOVE LEGALITY
+		// ============================
+		const learnset =
+			this.dex.species.getLearnsetData(species.id)?.learnset || {};
+
 		for (const moveName of set.moves) {
 			const move = this.dex.moves.get(moveName);
-			const learnset = this.dex.getLearnset(species.id);
 
-			if (!learnset || !learnset[move.id]) {
+			// Direct learnset
+			if (learnset[move.id]) continue;
+
+			// Mega fallback to base species learnset
+			if (species.baseSpecies) {
 				const baseId = this.toID(species.baseSpecies);
-				const baseLearnset = this.dex.getLearnset(baseId);
 
-				if (!baseLearnset || !baseLearnset[move.id]) {
-					errors.push(`${species.name} cannot learn ${move.name}.`);
-				}
+				const baseLearnset =
+					this.dex.species.getLearnsetData(baseId)?.learnset || {};
+
+				if (baseLearnset[move.id]) continue;
 			}
+
+			errors.push(`${species.name} cannot learn ${move.name}.`);
 		}
-	
-	init() {
-		this.modData('TypeChart', 'Fairy', {
-			damageTaken: {},
-		});
-	},
 
-	actions: {
-		getCategory(move) {
-			if (move.category !== 'Status') {
-				const specialTypes = [
-					'Fire',
-					'Water',
-					'Grass',
-					'Electric',
-					'Ice',
-					'Psychic',
-					'Dragon',
-					'Dark',
-					'Fairy',
-				];
-
-				return specialTypes.includes(move.type)
-					? 'Special'
-					: 'Physical';
-			}
-
-			return 'Status';
-		},
-	},
 		return errors;
 	},
-	
-onValidateTeam(team) {
-	let megaCount = 0;
 
-	for (const set of team) {
-		const species = this.dex.species.get(set.species);
+	// ============================
+	// TEAM VALIDATION (MEGA CLAUSE)
+	// ============================
+	onValidateTeam(team, format) {
+		const isExtRed = format.id === 'gen1extinctionred';
 
-		// Check specifically for "Mega" in the name or the Mega forme property
-		const isMega = species.forme === 'Mega' || species.name.includes('-Mega');
+		let megaCount = 0;
 
-		if (isMega) {
-			megaCount++;
+		for (const set of team) {
+			const species = this.dex.species.get(set.species);
+
+			const isMega =
+				!!species.isMega ||
+				species.forme?.includes('Mega') ||
+				species.name.includes('Mega');
+
+			if (isMega) megaCount++;
+
+			if (isMega && !isExtRed) {
+				return [
+					`${species.name} is only allowed in Extinction Red.`,
+				];
+			}
 		}
-	}
 
-	if (megaCount > 1) {
-		return [
-			'You may only use one Mega Pokémon per team in Extinction Red.',
-		];
-	}
-},
+		if (isExtRed && megaCount > 1) {
+			return [
+				'You may only use one Mega Pokémon per team in Extinction Red.',
+			];
+		}
+	},
 
-onSwitchIn(pokemon) {
-	if (pokemon.species.name.includes('Mega')) return;
-},
+	// ============================
+	// SWITCH IN
+	// ============================
+	onSwitchIn(pokemon) {
+		// Reserved for future mechanics
+	},
 
+	// ============================
+	// INIT PATCHES
+	// ============================
 	init() {
-		/* ============================
-		 * POKÉMON FIXES
-		 * ============================ */
+		// ============================
+		// POKÉDEX FIXES
+		// ============================
 		for (const id in this.data.Pokedex) {
 			const species = this.modData('Pokedex', id);
 
+			// Make everything standard
 			species.isNonstandard = null;
+
+			// CRITICAL FIX:
+			// EVERYTHING belongs to Extinction Red
+			species.gen = 1;
+
+			// Default tier fallback
 			if (!species.tier) species.tier = 'OU';
 
-			// PERMANENT MEGA FIX
-			if (species.isMega || species.forme?.includes('Mega')) {
-				// Treat Mega as a real species, not a forme
-				species.isMega = false;
+			// ============================
+			// MEGA FIXES
+			// ============================
+			if (
+				species.isMega ||
+				species.forme?.includes('Mega') ||
+				species.name?.includes('Mega')
+			) {
+				// Keep Mega identity
+				species.isMega = true;
+
+				// Prevent transformation behavior
 				species.battleOnly = undefined;
-				species.forme = undefined;
-				species.formeChange = undefined;
+				species.requiredMove = undefined;
 
-				// Keep baseSpecies ONLY for learnset inheritance
-				// (do NOT delete it)
-				delete species.requiredItem;
-				delete species.requiredMove;
+				// Remove invalid item lock
+				if (
+					species.requiredItem &&
+					!this.data.Items[this.toID(species.requiredItem)]
+				) {
+					delete species.requiredItem;
+				}
 
-				// Copy base learnset if needed
-				const baseId = this.toID(species.baseSpecies);
-				if (this.data.Learnsets[baseId]) {
-					this.modData('Learnsets', id, {
-						learnset: {...this.data.Learnsets[baseId].learnset},
-					});
+				// Copy learnset from base species if needed
+				if (species.baseSpecies) {
+					const baseId = this.toID(species.baseSpecies);
+
+					const baseLearnset =
+						this.data.Learnsets[baseId]?.learnset;
+
+					if (baseLearnset && !this.data.Learnsets[id]) {
+						this.modData('Learnsets', id, {
+							learnset: {...baseLearnset},
+						});
+					}
 				}
 			}
 		}
 
-		/* ============================
-		 * MOVE FIXES
-		 * ============================ */
+		// ============================
+		// MOVE FIXES
+		// ============================
 		for (const id in this.data.Moves) {
 			const move = this.modData('Moves', id);
+
 			move.isNonstandard = null;
-			delete move.isUniversal;
+
+			// Make all modern moves legal in ER
+			move.gen = 1;
 		}
 
-		/* ============================
-		 * ITEM FIXES
-		 * ============================ */
+		// ============================
+		// ITEM FIXES
+		// ============================
 		for (const id in this.data.Items) {
 			const item = this.modData('Items', id);
+
 			item.isNonstandard = null;
 			item.gen = 1;
 		}
