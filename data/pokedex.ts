@@ -19582,6 +19582,15 @@ export const Pokedex: import('../sim/dex-species').SpeciesDataTable = {
 		tags: ["Mythical"],
 		eggGroups: ["Undiscovered"],
 	},
+	godle: {
+		num: 1026,
+		name: "Godle",
+		types: ["Bug", "Poison"],
+		baseStats: { hp: 122, atk: 122, def: 122, spa: 122, spd: 122, spe: 122 },
+		heightm: 1.0,
+		weightkg: 10.0,
+		color: "Brown",
+	},
 	missingno: {
 		num: 0,
 		name: "MissingNo.",
