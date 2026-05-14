@@ -1377,10 +1377,14 @@ export class Pokemon {
 			if (this.modifiedStats) this.modifiedStats[statName] = stats[statName]; // Gen 1: Reset modified stats.
 		}
 		if (this.battle.gen <= 1) {
-			// Gen 1: Re-Apply burn and para drops.
-			if (this.status === 'par') this.modifyStat!('spe', 0.25);
-			if (this.status === 'brn') this.modifyStat!('atk', 0.5);
+		// Gen 1 status stat drops
+		if (this.status === 'par') {
+			this.storedStats.spe = Math.floor(this.storedStats.spe / 4);
 		}
+		if (this.status === 'brn') {
+			this.storedStats.atk = Math.floor(this.storedStats.atk / 2);
+		}
+	}
 		this.speed = this.storedStats.spe;
 		return species;
 	}
