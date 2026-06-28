@@ -50,7 +50,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		team: 'randomBaby',
 		bestOfDefault: true,
 		ruleset: ['Standard'],
-	}
+	},
 
 	// Likeshop Spotlight
 	///////////////////////////////////////////////////////////////////
