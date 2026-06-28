@@ -117,7 +117,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		inherit: true,
 		name: "Caterpie",
 		types: ['Bug'],
-		baseStats: { hp: 45, atk: 30, def: 35, spa: 20, spd: 20, spe: 45 },
+		baseStats: { hp: 45, atk: 35, def: 35, spa: 20, spd: 20, spe: 45 },
 	},
 	metapod: {
 		inherit: true,
