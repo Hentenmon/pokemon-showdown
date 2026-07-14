@@ -4905,6 +4905,7 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                         rest: ["1M"],
                         shadowball: ["1L34", "1M"],
                         shadowclaw: ["1L56"],
+                        shadowpunch: ["1L25"],
                         shockwave: ["1M"],
                         sludgebomb: ["1L54", "1M"],
                         smog: ["1L1"],
