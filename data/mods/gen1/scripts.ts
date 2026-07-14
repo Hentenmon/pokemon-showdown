@@ -749,8 +749,8 @@ export const Scripts: ModdedBattleScriptsData = {
 
 				// Now we check for focus energy volatile.
 				if (source.volatiles['focusenergy']) {
-					// If it exists, crit chance is divided by 2 again and floored.
-					critChance = Math.floor(critChance * 2);
+					// In this format, Focus Energy quadruples the crit chance.
+					critChance = this.battle.clampIntRange(critChance * 4, 1, 255);
 				} else {
 					// Normally, without focus energy, crit chance is multiplied by 2 and capped at 255 here.
 					critChance = this.battle.clampIntRange(critChance * 2, 1, 255);
