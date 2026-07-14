@@ -13748,7 +13748,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		num: 400,
 		accuracy: 100,
 		basePower: 70,
-		category: "Physical",
+		category: "Special",
 		name: "Night Slash",
 		pp: 15,
 		priority: 0,

@@ -25,34 +25,11 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		baseStats: { hp: 80, atk: 82, def: 83, spa: 100, spd: 100, spe: 80 },
 	},
 	venusaurmega: {
-	num: 3,
-	name: "Venusaur-Mega",
-	baseSpecies: "Venusaur",
-	forme: "Mega",
-	types: ["Grass", "Poison"],
-
-	baseStats: {
-		hp: 80,
-		atk: 100,
-		def: 123,
-		spa: 122,
-		spd: 122,
-		spe: 80,
-	},
-
-	gen: 1.33,
-
-	tier: "OU",
-
-	isNonstandard: null,
-
-	// IMPORTANT
-	battleOnly: undefined,
-	requiredItem: undefined,
-	requiredMove: undefined,
-
-	// VERY IMPORTANT
-	isMega: true,
+		name: "Venusaur-Mega",
+		baseSpecies: "Venusaur",
+		isNonstandard: null,
+		types: ['Grass', 'Poison'],
+		baseStats: { hp: 80, atk: 100, def: 123, spa: 122, spd: 122, spe: 80 },
 	},
 	charmander: {
 		inherit: true,
