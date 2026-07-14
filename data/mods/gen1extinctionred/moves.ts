@@ -21985,7 +21985,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		num: 344,
 		accuracy: 100,
 		basePower: 120,
-		category: "Physical",
+		category: "Special",
 		name: "Volt Tackle",
 		pp: 15,
 		priority: 0,

@@ -2122,6 +2122,7 @@ export class Battle {
 			                Math.floor(targetDamage * effect.recoil[0] / effect.recoil[1]),
 			                1
 			            );
+						console.trace("GEN1 recoil");
 			            this.damage(amount, source, target, 'recoil');
 			        }
 			    }
