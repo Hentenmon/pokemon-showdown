@@ -745,17 +745,13 @@ export const Scripts: ModdedBattleScriptsData = {
 			if (!isCrit) {
 				// In gen 1, the critical chance is based on speed.
 				// First, we get the base speed, divide it by 2 and floor it. This is our current crit chance.
-				let critChance = Math.floor(this.dex.species.get(source.set.species).baseStats['spe'] / 2);
+				let critChance = Math.floor(this.dex.species.get(source.set.species).baseStats.spe / 2);
 
-				// Apply move crit ratio first
-				if (move.critRatio === 1) {
-				    critChance = Math.floor(critChance / 2);
-				} else if (move.critRatio === 2) {
+				if (source.volatiles['focusenergy']) {
 				    critChance = this.battle.clampIntRange(critChance * 4, 1, 255);
 				}
-
-				// Then Focus Energy
-				if (source.volatiles['focusenergy']) {
+				
+				if (move.critRatio === 2) {
 				    critChance = this.battle.clampIntRange(critChance * 4, 1, 255);
 				}
 
