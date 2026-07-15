@@ -762,4 +762,9 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		isNonstandard: "Unobtainable",
 		tier: "Illegal",
 	},
+	// Testing if pokemon can become illegal like this.
+	arceus: {
+		isNonstandard: "Unobtainable",
+		tier: "Illegal",
+	},
 };
