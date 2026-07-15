@@ -767,4 +767,5 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		isNonstandard: "Unobtainable",
 		tier: "Illegal",
 	},
+	// Nope, only changes team validator logic. Says "Arceus can't be obtained in this game."
 };
