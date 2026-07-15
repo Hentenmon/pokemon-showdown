@@ -104,9 +104,6 @@ export const Scripts: ModdedBattleScriptsData = {
 			// EVERYTHING belongs to Extinction Red
 			species.gen = 1;
 
-			// Default tier fallback
-			if (!species.tier) species.tier = 'OU';
-
 			// ============================
 			// MEGA FIXES
 			// ============================
