@@ -97,9 +97,15 @@ export const Scripts: ModdedBattleScriptsData = {
 		for (const id in this.data.Pokedex) {
 			const species = this.modData('Pokedex', id);
 
+			// Make everything standard
+			species.isNonstandard = null;
+
 			// CRITICAL FIX:
 			// EVERYTHING belongs to Extinction Red
 			species.gen = 1;
+
+			// Default tier fallback
+			if (!species.tier) species.tier = 'OU';
 
 			// ============================
 			// MEGA FIXES
