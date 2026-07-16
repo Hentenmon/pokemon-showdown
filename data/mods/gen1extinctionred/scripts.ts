@@ -112,10 +112,10 @@ export const Scripts: ModdedBattleScriptsData = {
 			// ============================
 			if (
 				species.isMega ||
-				species.forme?.includes('Mega') ||
+				species.forme?.includes('Mega')
 			) {
 				// Keep Mega identity
-				species.isMega = true;
+				// species.isMega = true;
 
 				// Prevent transformation behavior
 				species.battleOnly = undefined;
