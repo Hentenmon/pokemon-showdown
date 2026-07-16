@@ -113,22 +113,16 @@ export const Scripts: ModdedBattleScriptsData = {
 			if (
 				species.isMega ||
 				species.forme?.includes('Mega') ||
-				species.name?.includes('Mega')
 			) {
 				// Keep Mega identity
 				species.isMega = true;
 
 				// Prevent transformation behavior
 				species.battleOnly = undefined;
-				species.requiredMove = undefined;
-
-				// Remove invalid item lock
-				if (
-					species.requiredItem &&
-					!this.data.Items[this.toID(species.requiredItem)]
-				) {
-					delete species.requiredItem;
-				}
+				species.baseSpecies = species.name;
+				
+				delete species.requiredItem;
+    			delete species.requiredMove;
 
 				// Copy learnset from base species if needed
 				if (species.baseSpecies) {
