@@ -197,7 +197,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "LC",
 	},
 	parasect: {
-		tier: "OU",
+		tier: "NU",
 	},
 	venonat: {
 		tier: "LC",
@@ -275,10 +275,10 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "NFE",
 	},
 	poliwrath: {
-		tier: "OU",
+		tier: "PUBL",
 	},
 	politoed: {
-		tier: "OU",
+		tier: "ZU",
 	},
 	abra: {
 		tier: "LC",
@@ -524,10 +524,10 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "OU",
 	},
 	blissey: {
-		tier: "OU",
+		tier: "Uber",
 	},
 	tangela: {
-		tier: "LC",
+		tier: "PU",
 	},
 	tangrowth: {
 		tier: "UU",
@@ -545,7 +545,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "NFE",
 	},
 	kingdra: {
-		tier: "OU",
+		tier: "NU",
 	},
 	goldeen: {
 		tier: "LC",
@@ -578,7 +578,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "NU",
 	},
 	scizor: {
-		tier: "NU",
+		tier: "NUBL",
 	},
 	scizormega: {
 		tier: "UU",
@@ -677,13 +677,13 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "PU",
 	},
 	porygonz: {
-		tier: "OU",
+		tier: "UU",
 	},
 	omanyte: {
 		tier: "LC",
 	},
 	omastar: {
-		tier: "OU",
+		tier: "NUBL",
 	},
 	kabuto: {
 		tier: "LC",
@@ -716,7 +716,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "UU",
 	},
 	moltres: {
-		tier: "OU",
+		tier: "NU",
 	},
 	moltresgalar: {
 		tier: "OU",
