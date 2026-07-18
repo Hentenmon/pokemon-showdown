@@ -1960,6 +1960,7 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                         doubleedge: ["1L45", "1M"],
                         doublekick: ["1L30"],
                         doubleteam: ["1L35", "1M"],
+                        focusenergy: ["1L12"],
                         growl: ["1L1"],
                         headbutt: ["1M"],
                         hyperbeam: ["1M"],
