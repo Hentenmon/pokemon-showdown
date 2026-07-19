@@ -55,7 +55,9 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		name: "[Gen 1] Extinction Red Monotype",
 		mod: 'gen1extinctionred',
 		ruleset: ['Standard', 'Same Type Clause'],
-		unbanlist: ['Blissey'],
+		unbanlist: [
+			'Blissey',
+		],
 	},
 	{
 		name: "[Gen 1] Extinction Red UU",
