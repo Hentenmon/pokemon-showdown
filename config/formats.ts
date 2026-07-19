@@ -55,7 +55,6 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		name: "[Gen 1] Extinction Red Monotype",
 		mod: 'gen1extinctionred',
 		ruleset: ['Standard', 'Same Type Clause'],
-		teambuilderFormat: 'gen1extinctionred',
 		unbanlist: ['Blissey'],
 	},
 	{
@@ -63,7 +62,6 @@ export const Formats: import('../sim/dex-formats').FormatList = [
     	mod: 'gen1extinctionred',
     	ruleset: ['Standard', 'Mega Clause'],
 		banlist: ["Uber", "AG", "OU"],
-		teambuilderFormat: 'gen1extinctionred',
 	}
 
 	// Likeshop Spotlight
