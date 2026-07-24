@@ -1,6 +1,6 @@
 export const Scripts: ModdedBattleScriptsData = {
 	inherit: 'gen1',
-	gen: 1,
+	gen: 1.33,
 
 	// ============================
 	// TEAM VALIDATION
