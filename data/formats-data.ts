@@ -134,8 +134,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "LC",
 	},
 	raticate: {
-		isNonstandard: "Past",
-		tier: "Illegal",
+		tier: "RU",
 		natDexTier: "RU",
 	},
 	raticatealola: {
