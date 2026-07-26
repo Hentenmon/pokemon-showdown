@@ -8,7 +8,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "NFE",
 	},
 	venusaur: {
-		tier: "ZU",
+		tier: "PU",
 	},
 	venusaurmega: {
 		tier: "UU",
@@ -360,6 +360,9 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 	},
 	slowbro: {
 		tier: "PUBL",
+	},
+	slowbromega: {
+		tier: "UU"
 	},
 	slowking: {
 		tier: "PU",
