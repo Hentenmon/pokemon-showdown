@@ -758,7 +758,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "Uber",
 	},
 	mew: {
-		tier: "Uber",
+		tier: "OU",
 	},
 	godle: {
 		tier: "Uber",
