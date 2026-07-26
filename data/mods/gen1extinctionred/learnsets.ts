@@ -3999,7 +3999,6 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                         flamethrower: ["1M"],
                         fly: ["1M"],
                         headbutt: ["1M"],
-                        headsmash: ["1L70"],
                         hurricane: ["1M"],
                         hyperbeam: ["1L63", "1M"],
                         irontail: ["1M"],
