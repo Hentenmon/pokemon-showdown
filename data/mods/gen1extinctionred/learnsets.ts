@@ -8452,6 +8452,11 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                         toxic: ["1M"],
                 },
         },
+        tyrogue: {
+                learnset: {
+                        tackle: ["1L1"],
+                },
+        },
         umbreon: {
                 learnset: {
                         bite: ["1L25"],
