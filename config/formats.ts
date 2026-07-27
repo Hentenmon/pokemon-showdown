@@ -63,9 +63,10 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 	{
 		name: "[Gen 1] Extinction Red UU",
     	mod: 'gen1extinctionred',
-    	ruleset: ['Standard', 'Mega Clause'],
-		banlist: ["Uber", "AG", "OU"],
+    	ruleset: ['[Gen 1] Extinction Red OU'],
+		banlist: ["OU", "UUBL"],
 	}
+
 
 	// Likeshop Spotlight
 	///////////////////////////////////////////////////////////////////
