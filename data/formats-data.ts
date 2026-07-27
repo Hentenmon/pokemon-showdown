@@ -181,39 +181,25 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "Illegal",
 	},
 	pikachuoriginal: {
-		tier: "ZU",
-		doublesTier: "(DUU)",
-		natDexTier: "RU",
+		tier: "Illegal",
 	},
 	pikachuhoenn: {
-		tier: "ZU",
-		doublesTier: "(DUU)",
-		natDexTier: "RU",
+		tier: "Illegal",
 	},
 	pikachusinnoh: {
-		tier: "ZU",
-		doublesTier: "(DUU)",
-		natDexTier: "RU",
+		tier: "Illegal",
 	},
 	pikachuunova: {
-		tier: "ZU",
-		doublesTier: "(DUU)",
-		natDexTier: "RU",
+		tier: "Illegal",
 	},
 	pikachukalos: {
-		tier: "ZU",
-		doublesTier: "(DUU)",
-		natDexTier: "RU",
+		tier: "Illegal",
 	},
 	pikachualola: {
-		tier: "ZU",
-		doublesTier: "(DUU)",
-		natDexTier: "RU",
+		tier: "Illegal",
 	},
 	pikachupartner: {
-		tier: "ZU",
-		doublesTier: "(DUU)",
-		natDexTier: "RU",
+		tier: "Illegal",
 	},
 	pikachustarter: {
 		isNonstandard: "LGPE",
@@ -224,9 +210,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "Illegal",
 	},
 	pikachuworld: {
-		tier: "ZU",
-		doublesTier: "(DUU)",
-		natDexTier: "RU",
+		tier: "Illegal",
 	},
 	raichu: {
 		tier: "ZU",
@@ -3004,12 +2988,10 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "RU",
 	},
 	deerling: {
-		tier: "LC",
+		tier: "Illegal",
 	},
 	sawsbuck: {
-		tier: "ZU",
-		doublesTier: "(DUU)",
-		natDexTier: "RU",
+		tier: "Illegal",
 	},
 	emolga: {
 		isNonstandard: "Past",
@@ -4503,9 +4485,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "RU",
 	},
 	duraludon: {
-		tier: "NU",
-		doublesTier: "NFE",
-		natDexTier: "RU",
+		tier: "Illegal",
 	},
 	duraludongmax: {
 		isNonstandard: "Past",
