@@ -55,7 +55,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		baseSpecies: "Charizard",
 		isNonstandard: null,
 		types: ['Fire', 'Dragon'],
-		baseStats: { hp: 78, atk: 130, def: 111, spa: 85, spd: 85, spe: 100 },
+		baseStats: { hp: 78, atk: 135, def: 116, spa: 85, spd: 85, spe: 105 },
 	},
 	charizardmegay: {
 		name: "Charizard-Mega-Y",
