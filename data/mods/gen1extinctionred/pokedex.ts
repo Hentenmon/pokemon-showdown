@@ -923,7 +923,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		inherit: true,
 		types: ['Fighting'],
 		isNonstandard: null,
-		baseStats: { hp: 105, atk: 100, def: 95, spa: 65, spd: 65, spe: 50 },
+		baseStats: { hp: 105, atk: 100, def: 95, spa: 75, spd: 75, spe: 50 },
 	},
 	lickitung: {
 		inherit: true,
