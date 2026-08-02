@@ -4633,10 +4633,10 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "Illegal",
 	},
 	wiglett: {
-		tier: "Illegal",
+		tier: "LC",
 	},
 	wugtrio: {
-		tier: "Illegal",
+		tier: "OU",
 	},
 	dondozo: {
 		tier: "Illegal",
