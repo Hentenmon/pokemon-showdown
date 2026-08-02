@@ -61,7 +61,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "Illegal",
 	},
 	caterpie: {
-		tier: "OU",
+		tier: "LC",
 		natDexTier: "LC",
 	},
 	metapod: {
