@@ -538,6 +538,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Blast Burn",
 		desc: "If this move is successful, the user must recharge on the following turn and cannot select a move.",
 		shortDesc: "User cannot move next turn.",
+		gen1: {
+			desc: "If this move is successful, the user must recharge on the following turn and cannot select a move, unless the target or its substitute was knocked out by this move.",
+			shortDesc: "Can't move next turn if target or sub is not KOed.",
+		},
 	},
 	blazekick: {
 		name: "Blaze Kick",
@@ -760,6 +764,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		gen4: {
 			desc: "The user steals the target's held Berry if it is holding one and eats it immediately, gaining its effects unless the user's item is being ignored. Items lost to this move can be regained with Recycle.",
 		},
+		gen1: {
+			desc: "No additional effect.",
+			shortDesc: "No additional effect.",
+		},
 
 		removeItem: "  [SOURCE] stole and ate its target's [ITEM]!",
 	},
@@ -795,6 +803,9 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		},
 		gen3: {
 			desc: "Hits two to five times. Has a 3/8 chance to hit two or three times, and a 1/8 chance to hit four or five times. If one of the hits breaks the target's substitute, it will take damage for the remaining hits.",
+		},
+		gen1: {
+			desc: "Hits two to five times. Has a 3/8 chance to hit two or three times, and a 1/8 chance to hit four or five times. Damage is calculated once for the first hit and used for every hit. If one of the hits breaks the target's substitute, the move ends.",
 		},
 	},
 	burningbulwark: {
@@ -981,7 +992,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	closecombat: {
 		name: "Close Combat",
 		desc: "Lowers the user's Defense and Special Defense by 1 stage.",
-		shortDesc: "Lowers the user's Defense and Sp. Def by 1.",
+			shortDesc: "Lowers the user's Defense and Sp. Def by 1.",
+		gen1: {
+			desc: "Lower's the user Defense and Special by 1 stage each.",
+			shortDesc: "Lower's the user Def and Spc by 1."
+		},
 	},
 	coaching: {
 		name: "Coaching",
@@ -1221,6 +1236,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 			desc: "Has a 20% chance to lower the target's Special Defense by 1 stage.",
 			shortDesc: "20% chance to lower the target's Sp. Def by 1.",
 		},
+		gen1: {
+			desc: "Has a 33% chance to lower the target's Special Defense by 1 stage.",
+			shortDesc: "33% chance to lower the target's Sp. Def by 1.",
+		},
 	},
 	crushclaw: {
 		name: "Crush Claw",
@@ -1262,6 +1281,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Dark Pulse",
 		desc: "Has a 20% chance to make the target flinch.",
 		shortDesc: "20% chance to make the target flinch.",
+		gen1: {
+			desc: "Has a 30% chance to make the target flinch.",
+			shortDesc: "30% chance to make the target flinch.",
+		},
 	},
 	darkvoid: {
 		name: "Dark Void",
@@ -1501,6 +1524,9 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Double Iron Bash",
 		desc: "Hits twice. If the first hit breaks the target's substitute, it will take damage for the second hit. Has a 30% chance to make the target flinch.",
 		shortDesc: "Hits twice. 30% chance to make the target flinch.",
+		gen1: {
+			desc: "Hits twice. Damage is calculated once for the first hit and used for both hits. If the first hit breaks the target's substitute, the move ends.",
+		},
 	},
 	doublekick: {
 		name: "Double Kick",
@@ -1546,6 +1572,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Draco Meteor",
 		desc: "Lowers the user's Special Attack by 2 stages.",
 		shortDesc: "Lowers the user's Sp. Atk by 2.",
+		gen1: {
+			desc: "Lowers the user's Special by 2 stages.",
+			shortDesc: "Lowers the user's Spc by 2.",
+		},
 	},
 	dragonascent: {
 		name: "Dragon Ascent",
@@ -1614,6 +1644,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Draining Kiss",
 		desc: "The user recovers 3/4 the HP lost by the target, rounded half up. If Big Root is held by the user, the HP recovered is 1.3x normal, rounded half down.",
 		shortDesc: "User recovers 75% of the damage dealt.",
+		gen1: {
+			desc: "The user recovers 1/2 the HP lost by the target, rounded down.",
+			shortDesc: "User recovers 50% of the damage dealt."
+		},
 	},
 	drainpunch: {
 		name: "Drain Punch",
@@ -1645,6 +1679,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Drill Run",
 		desc: "Has a higher chance for a critical hit.",
 		shortDesc: "High critical hit ratio.",
+		gen1: {
+			desc: "No additional effect.",
+			shortDesc: "No additional effect.",
+		}
 	},
 	drumbeating: {
 		name: "Drum Beating",
@@ -1677,6 +1715,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Earth Power",
 		desc: "Has a 10% chance to lower the target's Special Defense by 1 stage.",
 		shortDesc: "10% chance to lower the target's Sp. Def by 1.",
+		gen1: {
+			desc: "Has a 33% chance to lower the target's Special by 1 stage.",
+			shortDesc: "33% chance to lower the target's Special by 1.",
+		},
 	},
 	earthquake: {
 		name: "Earthquake",
@@ -1834,6 +1876,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Energy Ball",
 		desc: "Has a 10% chance to lower the target's Special Defense by 1 stage.",
 		shortDesc: "10% chance to lower the target's Sp. Def by 1.",
+		gen1: {
+			desc: "Has a 33% chance to lower the target's Special by 1 stage.",
+			shortDesc: "33% chance to lower the target's Special by 1.",
+		},
 	},
 	entrainment: {
 		name: "Entrainment",
@@ -2000,8 +2046,8 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 	},
 	fierywrath: {
 		name: "Fiery Wrath",
-		desc: "Has a 20% chance to make the target flinch.",
-		shortDesc: "20% chance to make the foe(s) flinch.",
+		desc: "Has a 30% chance to make the target flinch.",
+		shortDesc: "30% chance to make the foe(s) flinch.",
 	},
 	filletaway: {
 		name: "Fillet Away",
@@ -2157,6 +2203,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Flash Cannon",
 		desc: "Has a 10% chance to lower the target's Special Defense by 1 stage.",
 		shortDesc: "10% chance to lower the target's Sp. Def by 1.",
+		gen1: {
+			desc: "Has a 33% chance to lower the target's Special by 1 stage.",
+			shortDesc: "33% chance to lower the target's Special by 1.",
+		},
 	},
 	flatter: {
 		name: "Flatter",
@@ -2339,6 +2389,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Frenzy Plant",
 		desc: "If this move is successful, the user must recharge on the following turn and cannot select a move.",
 		shortDesc: "User cannot move next turn.",
+		gen1: {
+			desc: "If this move is successful, the user must recharge on the following turn and cannot select a move, unless the target or its substitute was knocked out by this move.",
+			shortDesc: "Can't move next turn if target or sub is not KOed.",
+		},
 	},
 	frostbreath: {
 		name: "Frost Breath",
@@ -3167,6 +3221,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Hydro Cannon",
 		desc: "If this move is successful, the user must recharge on the following turn and cannot select a move.",
 		shortDesc: "User cannot move next turn.",
+		gen1: {
+			desc: "If this move is successful, the user must recharge on the following turn and cannot select a move, unless the target or its substitute was knocked out by this move.",
+			shortDesc: "Can't move next turn if target or sub is not KOed.",
+		},
 	},
 	hydropump: {
 		name: "Hydro Pump",
@@ -3295,6 +3353,9 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		gen3: {
 			desc: "Hits two to five times. Has a 3/8 chance to hit two or three times, and a 1/8 chance to hit four or five times. If one of the hits breaks the target's substitute, it will take damage for the remaining hits.",
 		},
+		gen1: {
+			desc: "Hits two to five times. Has a 3/8 chance to hit two or three times, and a 1/8 chance to hit four or five times. Damage is calculated once for the first hit and used for every hit. If one of the hits breaks the target's substitute, the move ends.",
+		},
 	},
 	icywind: {
 		name: "Icy Wind",
@@ -3356,6 +3417,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		gen7: {
 			desc: "Prevents the target from switching for four or five turns (seven turns if the user is holding Grip Claw). Causes damage to the target equal to 1/8 of its maximum HP (1/6 if the user is holding Binding Band), rounded down, at the end of each turn during effect. The target can still switch out if it is holding Shed Shell or uses Baton Pass, Parting Shot, U-turn, or Volt Switch. The effect ends if either the user or the target leaves the field, or if the target uses Rapid Spin or Substitute successfully. This effect is not stackable or reset by using this or another binding move.",
 		},
+		gen1: {
+			desc: "The user spends two to five turns using this move. Has a 3/8 chance to last two or three turns, and a 1/8 chance to last four or five turns. The damage calculated for the first turn is used for every other turn. The user cannot select a move and the target cannot execute a move during the effect, but both may switch out. If the user switches out, the target remains unable to execute a move during that turn. If the target switches out, the user uses this move again automatically, and if it had 0 PP at the time, it becomes 63. If the user or the target switch out, or the user is prevented from moving, the effect ends. This move can prevent the target from moving even if it has type immunity, but will not deal damage.",
+			shortDesc: "Prevents the target from moving for 2-5 turns.",
+		},
 
 		start: "  [POKEMON] has been afflicted with an infestation by [SOURCE]!",
 	},
@@ -3415,6 +3480,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Iron Tail",
 		desc: "Has a 30% chance to lower the target's Defense by 1 stage.",
 		shortDesc: "30% chance to lower the target's Defense by 1.",
+		gen1: {
+			desc: "Has a 33% chance to lower the target's Special by 1 stage.",
+			shortDesc: "33% chance to lower the target's Special by 1.",
+		},
 	},
 	ivycudgel: {
 		name: "Ivy Cudgel",
@@ -3562,6 +3631,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Leaf Storm",
 		desc: "Lowers the user's Special Attack by 2 stages.",
 		shortDesc: "Lowers the user's Sp. Atk by 2.",
+		gen1: {
+			desc: "Lowers the user's Special by 2 stages.",
+			shortDesc: "Lowers the user's Spc by 2.",
+		},
 	},
 	leaftornado: {
 		name: "Leaf Tornado",
@@ -4291,6 +4364,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Moonblast",
 		desc: "Has a 30% chance to lower the target's Special Attack by 1 stage.",
 		shortDesc: "30% chance to lower the target's Sp. Atk by 1.",
+		gen1: {
+			desc: "Has a 33% chance to lower the target's Special by 1 stage.",
+			shortDesc: "33% chance to lower the target's Special by 1.",
+		},
 	},
 	moongeistbeam: {
 		name: "Moongeist Beam",
@@ -4567,6 +4644,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		gen2: {
 			desc: "Whether or not this move is successful, the user spends two or three turns locked into this move and becomes confused immediately after its move on the last turn of the effect, even if it is already confused. If the user is prevented from moving, the effect ends without causing confusion. If this move is called by Sleep Talk, the move is used for one turn and does not confuse the user.",
 		},
+		gen1: {
+			desc: "Whether or not this move is successful, the user spends three or four turns locked into this move and becomes confused immediately after its move on the last turn of the effect, even if it is already confused. If the user is prevented from moving, the effect ends without causing confusion. During the effect, this move's accuracy is overwritten every turn with the current calculated accuracy including stat stage changes, but not to less than 1/256 or more than 255/256.",
+			shortDesc: "Lasts 3-4 turns. Confuses the user afterwards.",
+		},
 	},
 	overdrive: {
 		name: "Overdrive",
@@ -4714,6 +4795,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Play Rough",
 		desc: "Has a 10% chance to lower the target's Attack by 1 stage.",
 		shortDesc: "10% chance to lower the target's Attack by 1.",
+		gen1: {
+			desc: "Has a 33% chance to lower the target's Attack by 1 stage.",
+			shortDesc: "33% chance to lower the target's Attack by 1.",
+		},
 	},
 	pluck: {
 		name: "Pluck",
@@ -4746,6 +4831,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Poison Jab",
 		desc: "Has a 30% chance to poison the target.",
 		shortDesc: "30% chance to poison the target.",
+		gen1: {
+			desc: "Has a 40% chance to poison the target.",
+			shortDesc: "40% chance to poison the target.",
+		},
 	},
 	poisonpowder: {
 		name: "Poison Powder",
@@ -5443,6 +5532,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		gen4: {
 			desc: "The user restores 1/2 of its maximum HP, rounded down. Until the end of the turn, Flying-type users lose their Flying type and pure Flying-type users become typeless. Does nothing if the user's HP is full.",
 		},
+		gen1: {
+			desc: "The user restores 1/2 of its maximum HP, rounded down.",
+			shortDesc: "User restores 1/2 of maximum health.",
+		},
 
 		start: "  ([POKEMON] loses Flying type this turn.)",
 	},
@@ -5655,6 +5748,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Shadow Ball",
 		desc: "Has a 20% chance to lower the target's Special Defense by 1 stage.",
 		shortDesc: "20% chance to lower the target's Sp. Def by 1.",
+		gen1: {
+			desc: "Has a 33% chance to lower the target's Special by 1 stage.",
+			shortDesc: "33% chance to lower the target's Special by 1.",
+		},
 	},
 	shadowbone: {
 		name: "Shadow Bone",
@@ -5961,6 +6058,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Sludge Bomb",
 		desc: "Has a 30% chance to poison the target.",
 		shortDesc: "30% chance to poison the target.",
+		gen1: {
+			desc: "Has a 40% chance to poison the target.",
+			shortDesc: "40% chance to poison the target.",
+		},
 	},
 	sludgewave: {
 		name: "Sludge Wave",
@@ -7208,6 +7309,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 			desc: "Has a 20% chance to make the target flinch. Power doubles if the target is using Fly.",
 			shortDesc: "20% chance to make the target flinch.",
 		},
+		gen1: {
+			desc: "Has a 30% chance to make the target flinch. Power doubles if the target is using Fly.",
+			shortDesc: "30% chance to make the target flinch.",
+		},
 	},
 	upperhand: {
 		name: "Upper Hand",
@@ -7314,6 +7419,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 			desc: "If the target lost HP, the user takes recoil damage equal to 1/3 the HP lost by the target, rounded down, but not less than 1 HP.",
 			shortDesc: "Has 1/3 recoil.",
 		},
+		gen1: {
+			desc: "If the target lost HP, the user takes recoil damage equal to 1/3 the HP lost by the target, rounded down, but not less than 1 HP.",
+			shortDesc: "Has 1/3 recoil.",
+		},
 	},
 	wakeupslap: {
 		name: "Wake-Up Slap",
@@ -7349,6 +7458,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Water Pulse",
 		desc: "Has a 20% chance to confuse the target.",
 		shortDesc: "20% chance to confuse the target.",
+		gen1: {
+			desc: "Has a 10% chance to confuse the target.",
+			shortDesc: "10% chance to confuse the target.",
+		}
 	},
 	watershuriken: {
 		name: "Water Shuriken",
@@ -7400,6 +7513,11 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		},
 
 		move: "Breakneck Blitz turned into [MOVE] due to the weather!",
+	},
+	weedlesting: {
+		name: "Weedle Sting",
+		desc: "Will always go first. Bypasses Protect. Always crits the opponent.",
+		shortDesc: "A ridiculously OP move. Only usable by Godle.",
 	},
 	whirlpool: {
 		name: "Whirlpool",
@@ -7600,6 +7718,10 @@ export const MovesText: { [id: IDEntry]: MoveText } = {
 		name: "Zen Headbutt",
 		desc: "Has a 20% chance to make the target flinch.",
 		shortDesc: "20% chance to make the target flinch.",
+		gen1: {
+			desc: "Has a 30% chance to make the target flinch.",
+		shortDesc: "30% chance to make the target flinch.",
+		}
 	},
 	zingzap: {
 		name: "Zing Zap",
