@@ -99857,6 +99857,13 @@ export const Learnsets: import('../sim/dex-species').LearnsetDataTable = {
 			willowisp: ["9M"],
 		},
 	},
+	godle: {
+                learnset: {
+                        poisonsting: ["1L1"],
+                        stringshot: ["1L1"],
+                        weedlesting: ["1L100"],
+                },
+    },
 	pokestarsmeargle: {
 		eventData: [
 			{generation: 5, level: 60, gender: "M", abilities: ["owntempo"], moves: ["mindreader", "guillotine", "tailwhip", "gastroacid"]},
