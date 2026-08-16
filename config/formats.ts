@@ -65,6 +65,14 @@ export const Formats: import('../sim/dex-formats').FormatList = [
     	mod: 'gen1extinctionred',
     	ruleset: ['[Gen 1] Extinction Red OU'],
 		banlist: ["OU", "UUBL"],
+	},
+	{
+		name: "[Gen 1] Extinction Red Custom Game",
+		mod: 'gen1extinctionred',
+		searchShow: false,
+		debug: true,
+		battle: { trunc: Math.trunc },
+		ruleset: ['HP Percentage Mod', 'Cancel Mod', 'Desync Clause Mod', 'Max Team Size = 255', 'Max Move Count = 4', 'Max Level = 255', 'Default Level = 100'],
 	}
 
 
